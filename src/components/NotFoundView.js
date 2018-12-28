@@ -1,0 +1,12 @@
+import React from 'react';
+
+function NotFoundView() {
+  return (
+    <div className="ui container left aligned ">
+      <h1>404</h1>
+      <p id="aboutText">Page not found :(</p>
+    </div>
+  );
+}
+
+export default NotFoundView;
