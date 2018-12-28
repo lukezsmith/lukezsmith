@@ -61,7 +61,7 @@ class ArticleDetailView extends React.Component {
     if (article.data !== undefined) {
       disqusShortname = 'lukezsmith';
       disqusConfig = {
-        url: `http://localhost:3000/${article.data.slug}`,
+        url: `https://lukezsmith.herokuapp.com/${article.data.slug}`,
         identifier: article.data.id,
         title: article.data.title,
       };
@@ -72,12 +72,12 @@ class ArticleDetailView extends React.Component {
           <p className="contentDate">{publishedDate}</p>
           <div className="articleContent">
             <p>{article.data.lead}</p>
-            {Parser(this.state.article.data.content)}
+            {Parser({ htmlContent })}
           </div>
           <Divider />
           <div id="socialEmbed">
             <ShareButtons
-              url={`http://localhost:3000/${article.data.slug}`}
+              url={`https://lukezsmith.herokuapp.com/${article.data.slug}`}
               title={article.data.title}
             />
           </div>

@@ -13,7 +13,7 @@ class ArticleListView extends React.Component {
   componentDidMount() {
     const getData = async () => {
       try {
-        return await axios.get('http://lukezsmith.herokuapp.com/api/');
+        return await axios.get('https://lukezsmith.herokuapp.com/api/');
       } catch (error) {
         this.setState({ articles: '404' });
       }
@@ -21,7 +21,7 @@ class ArticleListView extends React.Component {
     };
     const evalData = async () => {
       const data = await getData();
-      if (data !== undefined && data.data.length !== 0) {
+      if (data !== undefined) {
         this.setState({ articles: data });
       } else {
         this.setState({ articles: '404' });
@@ -39,7 +39,7 @@ class ArticleListView extends React.Component {
 
     let posts = <h1>Oops! No posts yet, please check again later.</h1>;
 
-    if (articles.data !== undefined || articles.data !== '404') {
+    if (articles.data !== undefined && articles.data !== '404') {
       posts = (
         <ul>
           {articles.data.map(article => (
