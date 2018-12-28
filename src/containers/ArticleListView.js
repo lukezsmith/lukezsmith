@@ -41,7 +41,7 @@ class ArticleListView extends React.Component {
 
     if (articles.data !== undefined && articles.data !== '404') {
       posts = (
-        <ul>
+        <ul id="articleList">
           {articles.data.map(article => (
             <Article data={article} />
           ))}
@@ -49,7 +49,7 @@ class ArticleListView extends React.Component {
       );
     }
     return (
-      <Grid.Column id="articleList" width={11}>
+      <Grid.Column id="articleListMainGrid" width={11}>
         {posts}
         <Divider />
         <Newsletter />

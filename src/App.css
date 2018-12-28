@@ -117,6 +117,10 @@ ul{
 }
 
 #articleList{
+  margin-bottom: 3%;
+}
+
+#articleListMainGrid{
   padding-top: 2%;
 }
 
