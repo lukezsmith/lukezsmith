@@ -48,6 +48,8 @@ class ArticleDetailView extends React.Component {
     const { article, publishedDate, htmlContent } = this.state;
     let disqusShortname = '';
     let disqusConfig = {};
+    console.log(article);
+    console.log(htmlContent);
     if (article === null) {
       return null;
     }
