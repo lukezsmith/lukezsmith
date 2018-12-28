@@ -52,6 +52,7 @@ class ArticleDetailView extends React.Component {
     let disqusConfig = {};
     console.log(`article: ${article}`);
     console.log(`htmlContent: ${htmlContent}`);
+    console.log(`state content: ${this.state.article.data.content}`);
     if (article === null) {
       console.log('null render');
       return null;
