@@ -78,7 +78,7 @@ class ArticleDetailView extends React.Component {
           <div className="articleContent">
             <p>{article.data.lead}</p>
             {/* {Parser({ htmlContent })} */}
-            <div dangerouslySetInnerHTML>{this.state.article.data.content}</div>
+            <div dangerouslySetInnerHTML={{ __html: this.state.article.data.content }} />
           </div>
           <Divider />
           <div id="socialEmbed">
