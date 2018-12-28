@@ -21,7 +21,7 @@ class ArticleDetailView extends React.Component {
 
     const getData = async () => {
       try {
-        return await axios.get(`https://lukezsmith.herokuapp.com/api/${articleSlug}`);
+        return await axios.get(`https://lukezsmith.herokuapp.com/api/${articleSlug}/`);
       } catch (error) {
         this.setState({ article: '404' });
       }
@@ -30,6 +30,7 @@ class ArticleDetailView extends React.Component {
       const data = await getData();
       if (data !== undefined) {
         this.setState({ article: data });
+        console.log(`data: ${data}`);
 
         const date = moment(this.state.article.data.published_date).format('Do MMMM, YYYY');
         this.setState({
@@ -48,8 +49,8 @@ class ArticleDetailView extends React.Component {
     const { article, publishedDate, htmlContent } = this.state;
     let disqusShortname = '';
     let disqusConfig = {};
-    console.log(article);
-    console.log(htmlContent);
+    console.log(`article: ${article}`);
+    console.log(`htmlContent: ${htmlContent}`);
     if (article === null) {
       return null;
     }
@@ -63,7 +64,7 @@ class ArticleDetailView extends React.Component {
     if (article.data !== undefined) {
       disqusShortname = 'lukezsmith';
       disqusConfig = {
-        url: `https://lukezsmith.herokuapp.com/${article.data.slug}`,
+        url: `https://lukezsmith.herokuapp.com/${article.data.slug}/`,
         identifier: article.data.id,
         title: article.data.title,
       };
@@ -79,7 +80,7 @@ class ArticleDetailView extends React.Component {
           <Divider />
           <div id="socialEmbed">
             <ShareButtons
-              url={`https://lukezsmith.herokuapp.com/${article.data.slug}`}
+              url={`https://lukezsmith.herokuapp.com/${article.data.slug}/`}
               title={article.data.title}
             />
           </div>
