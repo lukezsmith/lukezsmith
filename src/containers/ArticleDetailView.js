@@ -2,13 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import { Divider } from 'semantic-ui-react';
-import Parser from 'html-react-parser/dist/html-react-parser';
 import { DiscussionEmbed } from 'disqus-react';
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from 'react-html-parser';
+import ReactHtmlParser from 'react-html-parser';
 
 import Newsletter from '../components/Newsletter';
 import ShareButtons from '../components/ShareButtons';
@@ -28,7 +23,6 @@ class ArticleDetailView extends React.Component {
       try {
         return await axios.get(`https://lukezsmith.herokuapp.com/api/${articleSlug}/`);
       } catch (error) {
-        console.error(error);
         this.setState({ article: '404' });
       }
     };
@@ -36,7 +30,6 @@ class ArticleDetailView extends React.Component {
       const data = await getData();
       if (data !== undefined) {
         this.setState({ article: data });
-        console.log(`data: ${data}`);
 
         const date = moment(this.state.article.data.published_date).format('Do MMMM, YYYY');
         this.setState({
@@ -55,10 +48,7 @@ class ArticleDetailView extends React.Component {
     const { article, publishedDate, htmlContent } = this.state;
     let disqusShortname = '';
     let disqusConfig = {};
-    console.log(`article: ${article}`);
-    console.log(`htmlContent: ${htmlContent}`);
     if (article === null) {
-      console.log('null render');
       return null;
     }
 
@@ -83,8 +73,6 @@ class ArticleDetailView extends React.Component {
           <div className="articleContent">
             <p>{article.data.lead}</p>
             <div>{ReactHtmlParser(htmlContent)}</div>
-            {/* {Parser({ htmlContent })} */}
-            {/* <div dangerouslySetInnerHTML={{ __html: this.state.article.data.content }} /> */}
           </div>
           <Divider />
           <div id="socialEmbed">
