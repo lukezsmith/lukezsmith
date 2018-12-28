@@ -72,7 +72,7 @@ class ArticleDetailView extends React.Component {
           <p className="contentDate">{publishedDate}</p>
           <div className="articleContent">
             <p>{article.data.lead}</p>
-            {Parser(htmlContent)}
+            {Parser(this.state.article.data.content)}
           </div>
           <Divider />
           <div id="socialEmbed">

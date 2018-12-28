@@ -138,8 +138,8 @@ class CustomLayout extends React.Component {
     );
   }
 }
-// CustomLayout.propTypes = {
-//   children: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired,
-// };
+CustomLayout.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired,
+};
 
 export default CustomLayout;
