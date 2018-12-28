@@ -6,12 +6,6 @@ import Article from '../components/Article';
 import Newsletter from '../components/Newsletter';
 
 class ArticleListView extends React.Component {
-  articleData = {
-    title: 'GitPython',
-    date: 'October 15, 2018',
-    lead: 'A quick tutorial to show how to get started with the powerful version control tool.',
-  };
-
   state = {
     articles: null,
   };
@@ -19,7 +13,7 @@ class ArticleListView extends React.Component {
   componentDidMount() {
     const getData = async () => {
       try {
-        return await axios.get('http://127.0.0.1:8000/api/');
+        return await axios.get('http://lukezsmith.herokuapp.com/api/');
       } catch (error) {
         this.setState({ articles: '404' });
       }

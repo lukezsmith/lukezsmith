@@ -22,7 +22,7 @@ class ArticleForm extends Component {
 
       case 'post':
         return axios
-          .post('http://127.0.0.1:8000/api/', {
+          .post('http://lukezsmith.herokuapp.com/api/', {
             title,
             lead,
             content,
@@ -33,7 +33,7 @@ class ArticleForm extends Component {
           .catch(error => console.error(error));
       case 'put':
         return axios
-          .put(`http://127.0.0.1:8000/api/${articleID}/`, {
+          .put(`http://lukezsmith.herokuapp.com/api/${articleID}/`, {
             title,
             lead,
             content,
