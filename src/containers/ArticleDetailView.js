@@ -4,6 +4,11 @@ import moment from 'moment';
 import { Divider } from 'semantic-ui-react';
 import Parser from 'html-react-parser/dist/html-react-parser';
 import { DiscussionEmbed } from 'disqus-react';
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from 'react-html-parser';
 
 import Newsletter from '../components/Newsletter';
 import ShareButtons from '../components/ShareButtons';
@@ -77,8 +82,9 @@ class ArticleDetailView extends React.Component {
           <p className="contentDate">{publishedDate}</p>
           <div className="articleContent">
             <p>{article.data.lead}</p>
+            <div>{ReactHtmlParser(htmlContent)}</div>
             {/* {Parser({ htmlContent })} */}
-            <div dangerouslySetInnerHTML={{ __html: this.state.article.data.content }} />
+            {/* <div dangerouslySetInnerHTML={{ __html: this.state.article.data.content }} /> */}
           </div>
           <Divider />
           <div id="socialEmbed">
