@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import { Divider } from 'semantic-ui-react';
-import Parser from 'html-react-parser';
+import Parser from 'html-react-parser/dist/html-react-parser';
 import { DiscussionEmbed } from 'disqus-react';
 
 import Newsletter from '../components/Newsletter';
