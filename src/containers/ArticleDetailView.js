@@ -23,6 +23,7 @@ class ArticleDetailView extends React.Component {
       try {
         return await axios.get(`https://lukezsmith.herokuapp.com/api/${articleSlug}/`);
       } catch (error) {
+        console.error(error);
         this.setState({ article: '404' });
       }
     };
@@ -52,6 +53,7 @@ class ArticleDetailView extends React.Component {
     console.log(`article: ${article}`);
     console.log(`htmlContent: ${htmlContent}`);
     if (article === null) {
+      console.log('null render');
       return null;
     }
 
