@@ -71,7 +71,6 @@ function ProjectView() {
           </Grid.Column>
         </Grid>
         <br />
-        <br />
       </Segment>
       <Segment raised className="projectSegments">
         <p id="aboutText">
@@ -94,8 +93,6 @@ function ProjectView() {
           <br />
           <Image className="ui large centered image" src={cryptoXView1} rounded alt="" />
           <br />
-          <br />
-          <br />
         </p>
       </Segment>
 
@@ -115,6 +112,7 @@ function ProjectView() {
             placeholder={shubotThumbnail}
             source="youtube"
           />
+          <br />
         </p>
       </Segment>
       <Newsletter />
