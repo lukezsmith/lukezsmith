@@ -31,8 +31,8 @@ i:hover{
 
 .underlineHeaderText{
   display: inline;
-  border-bottom: 3px solid 	#7e9fce !important;
-  padding-bottom: 1px !important;
+  border-bottom: 3px solid 	#7e9fce ;
+  padding-bottom: 1px ;
 }
 
 .underlineHeaderText:hover{
@@ -230,5 +230,5 @@ ul{
   margin-bottom: 10% !important; 
 }
 .activeLink{
-  border-bottom: 3px solid 	#fee18b;
+  border-bottom: 3px solid 	#fee18b !important;
 }
