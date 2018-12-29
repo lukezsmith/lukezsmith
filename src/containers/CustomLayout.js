@@ -30,7 +30,10 @@ class CustomLayout extends React.Component {
   }
 
   render() {
+    console.log(`url: ${this.props.location}`);
     const { children } = this.props;
+
+    const homeEval = () => {};
     return (
       <div className="mainSection">
         {/*
@@ -58,7 +61,12 @@ class CustomLayout extends React.Component {
                 <List.Item>
                   <List.Content>
                     <List.Header>
-                      <NavLink className="underlineLinkText" activeClassName="activeLink" to="/">
+                      <NavLink
+                        className="underlineLinkText"
+                        isActive={homeEval}
+                        activeClassName="activeLink"
+                        to="/"
+                      >
                         Blog
                       </NavLink>
                     </List.Header>
