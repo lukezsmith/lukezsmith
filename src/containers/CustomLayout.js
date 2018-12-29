@@ -58,7 +58,7 @@ class CustomLayout extends React.Component {
                 <List.Item>
                   <List.Content>
                     <List.Header>
-                      <Link className="aTagStyleBlocker" to="/">
+                      <Link className="aTagStyleBlocker" activeClassName="activeLink" to="/">
                         <h3 className="underlineHeaderText">Blog</h3>
                       </Link>
                     </List.Header>
@@ -67,7 +67,11 @@ class CustomLayout extends React.Component {
                 <List.Item>
                   <List.Content>
                     <List.Header>
-                      <Link className="aTagStyleBlocker" to="/projects">
+                      <Link
+                        className="aTagStyleBlocker"
+                        activeClassName="activeLink"
+                        to="/projects"
+                      >
                         <h3 className="underlineHeaderText  ">Projects</h3>
                       </Link>
                     </List.Header>
@@ -76,7 +80,7 @@ class CustomLayout extends React.Component {
                 <List.Item>
                   <List.Content>
                     <List.Header>
-                      <Link className="aTagStyleBlocker" to="/about">
+                      <Link className="aTagStyleBlocker" activeClassName="activeLink" to="/about">
                         <h3 className="underlineHeaderText ">About</h3>
                       </Link>
                     </List.Header>
