@@ -120,7 +120,7 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "240ca11617bbd7f3451ebd673396d7f3",
+    "revision": "0d3b404949f9ec13febd35258f587f63",
     "url": "/index.html"
   }
 ];
