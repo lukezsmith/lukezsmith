@@ -32,7 +32,18 @@ class CustomLayout extends React.Component {
   render() {
     const { children } = this.props;
 
-    const homeEval = () => {};
+    const homeEval = () => {
+      console.log(`current pathname: ${this.props.location.pathname}`);
+      if (
+        this.props.location.pathname !== '/about' &&
+        this.props.location.pathname !== '/projects'
+      ) {
+        console.log('condition met, returning true');
+        return true;
+      }
+      console.log('condition not met, returning false');
+      return false;
+    };
     return (
       <div className="mainSection">
         {/*
