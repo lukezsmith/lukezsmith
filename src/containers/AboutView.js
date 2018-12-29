@@ -6,6 +6,7 @@ import me from '../images/lukezsmith.jpg';
 import Newsletter from '../components/Newsletter';
 
 function AboutView() {
+  console.log(`about url: ${this.props.location}`);
   return (
     <div className="ui container left aligned ">
       <img id="aboutImg" src={me} className="ui medium centered image" alt="" />

@@ -32,6 +32,7 @@ class ArticleListView extends React.Component {
   }
 
   render() {
+    console.log(`blog url: ${this.props.location}`);
     const { articles } = this.state;
     if (articles === null) {
       return null;
