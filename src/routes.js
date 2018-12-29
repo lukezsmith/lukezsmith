@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import ArticleDetailView from './containers/ArticleDetailView';
 import ArticleList from './containers/ArticleListView';
 import CreateArticleView from './containers/CreateArticleView';
@@ -10,8 +10,8 @@ import ProjectView from './containers/ProjectView';
 const BaseRouter = () => (
   <div>
     <Switch>
-      <Route exact path="/">
-        <Redirect to="/blog/" />{' '}
+      <Route exact path="/" component={ArticleList}>
+        {' '}
       </Route>
       <Route path="/blog/" component={ArticleList}>
         {' '}
@@ -22,7 +22,7 @@ const BaseRouter = () => (
       <Route path="/projects/" component={ProjectView}>
         {' '}
       </Route>
-      <Route path="/blog/:articleSlug/" component={ArticleDetailView}>
+      <Route path="/:articleSlug/" component={ArticleDetailView}>
         {' '}
       </Route>
       <Route path="/new/" component={CreateArticleView}>

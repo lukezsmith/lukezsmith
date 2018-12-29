@@ -17,7 +17,7 @@ class Article extends React.Component {
       <div className="home-info">
         <div className="ui container left aligned">
           <p>
-            <a className="aTagStyleBlocker" href={`/blog/${data.slug}`}>
+            <a className="aTagStyleBlocker" href={`/${data.slug}`}>
               <h2 className="underlineHeaderText">{data.title}</h2>
             </a>
             <p id="dateText">{data.published_date}</p>
