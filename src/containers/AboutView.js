@@ -6,9 +6,9 @@ import me from '../images/lukezsmith.jpg';
 import Newsletter from '../components/Newsletter';
 
 function AboutView(props) {
-  console.log(`about props: ${props}`);
-  console.log(`about params: ${props.match.params}`);
-  console.log(`about url: ${props.location}`);
+  console.log(`about props: ${JSON.stringify(props)}`);
+  console.log(`about params: ${JSON.stringify(props.match.params)}`);
+  console.log(`about url: ${JSON.stringify(props.location)}`);
   return (
     <div className="ui container left aligned ">
       <img id="aboutImg" src={me} className="ui medium centered image" alt="" />

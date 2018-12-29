@@ -30,7 +30,6 @@ class CustomLayout extends React.Component {
   }
 
   render() {
-    console.log(`url: ${this.props.location}`);
     const { children } = this.props;
 
     const homeEval = () => {};
