@@ -15,10 +15,6 @@ import cryptoXView2 from '../images/cryptox-view-1.png';
 
 import shubotThumbnail from '../images/yt-thumbnail.jpg';
 
-import favicon from '../images/favicon.ico';
-import favicon16 from '../images/favicon-16x16.png';
-import favicon32 from '../images/favicon-32x32.png';
-
 function ProjectView() {
   return (
     <div id="projectContent" className="ui container left aligned">
@@ -120,9 +116,6 @@ function ProjectView() {
         </p>
       </Segment>
       <Newsletter />
-      <Image id="hiddenFavicon" src={favicon} />
-      <Image id="hiddenFavicon" src={favicon16} />
-      <Image id="hiddenFavicon" src={favicon32} />
     </div>
   );
 }
