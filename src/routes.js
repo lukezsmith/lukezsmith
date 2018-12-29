@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import ArticleDetailView from './containers/ArticleDetailView';
 import ArticleList from './containers/ArticleListView';
 import CreateArticleView from './containers/CreateArticleView';
@@ -20,10 +19,7 @@ const BaseRouter = () => (
       <Route path="/projects/" component={ProjectView}>
         {' '}
       </Route>
-      {/* <Route path="/favicon.ico" component={ArticleList}>
-        {' '}
-      </Route> */}
-      <Route path="/articles/:articleSlug/" component={ArticleDetailView}>
+      <Route path="/:articleSlug/" component={ArticleDetailView}>
         {' '}
       </Route>
       <Route path="/new/" component={CreateArticleView}>

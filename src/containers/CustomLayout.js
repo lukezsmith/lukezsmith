@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Grid, Divider, List } from 'semantic-ui-react';
 import { Events, animateScroll as scroll } from 'react-scroll';
 
@@ -48,9 +48,9 @@ class CustomLayout extends React.Component {
 
         <Grid id="mainGrid" columns={3}>
           <Grid.Column computer={3} tablet={1} mobile={0}>
-            <Link className="aTagStyleBlocker" to="/">
+            <NavLink className="aTagStyleBlocker" to="/">
               <h2 className="underlineHeaderText leftHeaderColText ">lukezsmith</h2>
-            </Link>
+            </NavLink>
           </Grid.Column>
           <Grid.Column id="centerCol" computer={10} tablet={14} mobile={16}>
             <Grid.Row id="listRow" textAlign="center">
@@ -58,31 +58,35 @@ class CustomLayout extends React.Component {
                 <List.Item>
                   <List.Content>
                     <List.Header>
-                      <Link className="aTagStyleBlocker" activeClassName="activeLink" to="/">
+                      <NavLink className="aTagStyleBlocker" activeClassName="activeLink" to="/">
                         <h3 className="underlineHeaderText">Blog</h3>
-                      </Link>
+                      </NavLink>
                     </List.Header>
                   </List.Content>
                 </List.Item>
                 <List.Item>
                   <List.Content>
                     <List.Header>
-                      <Link
+                      <NavLink
                         className="aTagStyleBlocker"
                         activeClassName="activeLink"
                         to="/projects"
                       >
                         <h3 className="underlineHeaderText  ">Projects</h3>
-                      </Link>
+                      </NavLink>
                     </List.Header>
                   </List.Content>
                 </List.Item>
                 <List.Item>
                   <List.Content>
                     <List.Header>
-                      <Link className="aTagStyleBlocker" activeClassName="activeLink" to="/about">
+                      <NavLink
+                        className="aTagStyleBlocker"
+                        activeClassName="activeLink"
+                        to="/about"
+                      >
                         <h3 className="underlineHeaderText ">About</h3>
-                      </Link>
+                      </NavLink>
                     </List.Header>
                   </List.Content>
                 </List.Item>
