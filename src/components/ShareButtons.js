@@ -21,7 +21,7 @@ function ShareButtons(props) {
   return (
     <div>
       <h3>Like this post? Share it with friends!</h3>
-      <Grid container centered columns={6} verticalAlign="middle">
+      <Grid centered columns={6} verticalAlign="middle">
         <Grid.Column>
           <TwitterShareButton url={url} title={title}>
             <TwitterIcon />
