@@ -20,9 +20,9 @@ const BaseRouter = () => (
       <Route path="/projects" component={ProjectView}>
         {' '}
       </Route>
-      {/* <Route path="/:articleSlug" component={ArticleDetailView}>
+      <Route path="/:articleSlug" component={ArticleDetailView}>
         {' '}
-      </Route> */}
+      </Route>
       <Route path="/new" component={CreateArticleView}>
         {' '}
       </Route>
