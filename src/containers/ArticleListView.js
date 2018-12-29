@@ -51,7 +51,6 @@ class ArticleListView extends React.Component {
     return (
       <Grid.Column id="articleListMainGrid" width={11}>
         {posts}
-        <Divider />
         <Newsletter />
       </Grid.Column>
     );
