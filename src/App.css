@@ -117,7 +117,7 @@ ul{
 }
 
 #articleList{
-  margin-bottom: 3%;
+  margin-bottom: 2%;
 }
 
 #articleListMainGrid{
@@ -227,4 +227,5 @@ ul{
 .projectSegments{
   background: #385e94 !important;
   border: 1px solid #7e9fce !important;
+  margin-bottom: 2% !important;
 }

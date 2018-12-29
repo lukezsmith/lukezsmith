@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Grid, Divider } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import Article from '../components/Article';
 import Newsletter from '../components/Newsletter';
 
