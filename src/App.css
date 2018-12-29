@@ -232,3 +232,14 @@ ul{
 .activeLink{
   border-bottom: 3px solid 	#fee18b !important;
 }
+
+.underlineLinkText{
+  font-size: 1rem;
+  display: inline;
+  border-bottom: 3px solid 	#7e9fce ;
+  padding-bottom: 1px ;
+}
+
+.underlineLinkText:hover{
+  border-bottom: 3px solid 	#fee18b; 
+}
