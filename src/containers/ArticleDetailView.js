@@ -84,7 +84,6 @@ class ArticleDetailView extends React.Component {
           <div id="disqusEmbed">
             <Divider />
             <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-            <Divider />
           </div>
         </div>
       );

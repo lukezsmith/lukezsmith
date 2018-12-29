@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, Image, Embed } from 'semantic-ui-react';
+import { Grid, Image, Embed, Segment } from 'semantic-ui-react';
 
 import Newsletter from '../components/Newsletter';
 
@@ -30,6 +30,9 @@ function ProjectView() {
         Some of my favourite projects that I have worked on recently include the following:
         <br />
         <br />
+      </p>
+      <Segment raised>
+        <p id="aboutText" />
         <Image id="" src={journeyPlannerLogo} className="ui small centered image" rounded alt="" />
         <br />
         <a href="https://github.com/lukezsmith/JourneyPlanner">
@@ -69,41 +72,51 @@ function ProjectView() {
         </Grid>
         <br />
         <br />
-        <Image id="" src={cryptoXLogo} className="ui small centered image" rounded alt="" />
-        <br />
-        <a href="https://github.com/lukezsmith/CryptoX">
-          <h1 className="underlineHeaderText">CryptoX</h1>
-        </a>
-        <br />
-        <br />
-        A site dedicated to displaying the top Cryptocurrencies ranked by marketcap. The site shows
-        statistics for each coin as well as a price graph. The search feature allows you to search
-        for any coin with a marketcap inside the top fifty coins.
-        <Image
-          className="ui large centered image projectPadding"
-          src={cryptoXView2}
-          rounded
-          alt=""
-        />
-        <br />
-        <Image className="ui large centered image" src={cryptoXView1} rounded alt="" />
-        <br />
-        <br />
-        <br />
-        <a href="https://github.com/lukezsmith/shubot">
-          <h1 className="underlineHeaderText">ShuBot</h1>
-        </a>
-        <br />
-        <br />
-        An automated tool to purchase limited items faster faster by automation. The tool supports
-        the following sites: SneakersNStuff.com, Offspring.com, SlamJamSocialism.com and Titolo.ch.
-        <Embed
-          className="projectPadding"
-          id="QFLiK1zl7VY"
-          placeholder={shubotThumbnail}
-          source="youtube"
-        />
-      </p>
+      </Segment>
+      <Segment raised>
+        <p id="aboutText">
+          <Image id="" src={cryptoXLogo} className="ui small centered image" rounded alt="" />
+          <br />
+          <a href="https://github.com/lukezsmith/CryptoX">
+            <h1 className="underlineHeaderText">CryptoX</h1>
+          </a>
+          <br />
+          <br />
+          A site dedicated to displaying the top Cryptocurrencies ranked by marketcap. The site
+          shows statistics for each coin as well as a price graph. The search feature allows you to
+          search for any coin with a marketcap inside the top fifty coins.
+          <Image
+            className="ui large centered image projectPadding"
+            src={cryptoXView2}
+            rounded
+            alt=""
+          />
+          <br />
+        </p>
+      </Segment>
+
+      <Segment raised>
+        <p id="aboutText">
+          <Image className="ui large centered image" src={cryptoXView1} rounded alt="" />
+          <br />
+          <br />
+          <br />
+          <a href="https://github.com/lukezsmith/shubot">
+            <h1 className="underlineHeaderText">ShuBot</h1>
+          </a>
+          <br />
+          <br />
+          An automated tool to purchase limited items faster faster by automation. The tool supports
+          the following sites: SneakersNStuff.com, Offspring.com, SlamJamSocialism.com and
+          Titolo.ch.
+          <Embed
+            className="projectPadding"
+            id="QFLiK1zl7VY"
+            placeholder={shubotThumbnail}
+            source="youtube"
+          />
+        </p>
+      </Segment>
       <Newsletter />
     </div>
   );

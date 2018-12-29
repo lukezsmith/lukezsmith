@@ -21,11 +21,7 @@ class Newsletter extends React.Component {
           {`(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);`}
         </script>
         <div>
-          <h2 id="newsletterHeader">
-            I create a monthly newsletter containing all the best and interesting content I have
-            come across online and in books.
-          </h2>
-          <h2 id="subscribeHeader">Subscribe here:</h2>
+          <h2 id="subscribeHeader">Subscribe to my newsletter:</h2>
         </div>
         <Form action="https://lukezsmith.us19.list-manage.com/subscribe/post" method="post">
           <input type="hidden" name="u" value="0ffa2cc92dbc571bc9a5c5ff6" />
