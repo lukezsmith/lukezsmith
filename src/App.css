@@ -223,3 +223,8 @@ ul{
 #newsletterEmbed{
   margin-bottom: 10%; 
 }
+
+.projectSegments{
+  background: #385e94;
+  border: 1px solid white;
+}

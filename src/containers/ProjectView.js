@@ -31,7 +31,7 @@ function ProjectView() {
         <br />
         <br />
       </p>
-      <Segment raised>
+      <Segment raised className="projectSegments">
         <p id="aboutText" />
         <Image id="" src={journeyPlannerLogo} className="ui small centered image" rounded alt="" />
         <br />
@@ -73,7 +73,7 @@ function ProjectView() {
         <br />
         <br />
       </Segment>
-      <Segment raised>
+      <Segment raised className="projectSegments">
         <p id="aboutText">
           <Image id="" src={cryptoXLogo} className="ui small centered image" rounded alt="" />
           <br />
@@ -92,15 +92,15 @@ function ProjectView() {
             alt=""
           />
           <br />
-        </p>
-      </Segment>
-
-      <Segment raised>
-        <p id="aboutText">
           <Image className="ui large centered image" src={cryptoXView1} rounded alt="" />
           <br />
           <br />
           <br />
+        </p>
+      </Segment>
+
+      <Segment raised className="projectSegments">
+        <p id="aboutText">
           <a href="https://github.com/lukezsmith/shubot">
             <h1 className="underlineHeaderText">ShuBot</h1>
           </a>
