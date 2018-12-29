@@ -31,8 +31,8 @@ i:hover{
 
 .underlineHeaderText{
   display: inline;
-  border-bottom: 3px solid 	#7e9fce;
-  padding-bottom: 1px;
+  border-bottom: 3px solid 	#7e9fce !important;
+  padding-bottom: 1px !important;
 }
 
 .underlineHeaderText:hover{
