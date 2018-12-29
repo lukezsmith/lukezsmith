@@ -7,6 +7,7 @@ import Newsletter from '../components/Newsletter';
 
 function AboutView(props) {
   console.log(`about props: ${props}`);
+  console.log(`about params: ${props.match.params}`);
   console.log(`about url: ${props.location}`);
   return (
     <div className="ui container left aligned ">

@@ -17,7 +17,8 @@ import shubotThumbnail from '../images/yt-thumbnail.jpg';
 
 function ProjectView(props) {
   console.log(`project props: ${props}`);
-  console.log(`project url: ${this.props.location}`);
+  console.log(`project params: ${props.match.params}`);
+  console.log(`project url: ${props.location}`);
   return (
     <div id="projectContent" className="ui container left aligned">
       <h1>Projects</h1>
