@@ -58,8 +58,8 @@ class CustomLayout extends React.Component {
                 <List.Item>
                   <List.Content>
                     <List.Header>
-                      <NavLink className="aTagStyleBlocker" activeClassName="activeLink" to="/">
-                        <h3 className="underlineHeaderText">Blog</h3>
+                      <NavLink className="underlineHeaderText" activeClassName="activeLink" to="/">
+                        <h3>Blog</h3>
                       </NavLink>
                     </List.Header>
                   </List.Content>
