@@ -82,7 +82,8 @@ class CustomLayout extends React.Component {
                     <List.Header>
                       <NavLink
                         className="aTagStyleBlocker"
-                        activeClassName="activeLink"
+                        // activeClassName="activeLink"
+                        activeStyle={{ 'border-bottom': '3px solid 	#fee18b' }}
                         to="/about"
                       >
                         <h3 className="underlineHeaderText ">About</h3>
