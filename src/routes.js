@@ -14,19 +14,22 @@ const BaseRouter = () => (
       <Route exact path="/" component={ArticleList}>
         {' '}
       </Route>
-      <Route path="/about" component={AboutView}>
+      <Route path="/about/" component={AboutView}>
         {' '}
       </Route>
-      <Route path="/projects" component={ProjectView}>
+      <Route path="/projects/" component={ProjectView}>
         {' '}
       </Route>
-      <Route path="/:articleSlug" component={ArticleDetailView}>
+      {/* <Route path="/favicon.ico" component={ArticleList}>
+        {' '}
+      </Route> */}
+      <Route path="/articles/:articleSlug/" component={ArticleDetailView}>
         {' '}
       </Route>
-      <Route path="/new" component={CreateArticleView}>
+      <Route path="/new/" component={CreateArticleView}>
         {' '}
       </Route>
-      <Route path="/update" component={UpdateArticleView}>
+      <Route path="/update/" component={UpdateArticleView}>
         {' '}
       </Route>
     </Switch>
