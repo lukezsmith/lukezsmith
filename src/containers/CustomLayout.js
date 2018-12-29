@@ -72,7 +72,7 @@ class CustomLayout extends React.Component {
                         activeClassName="activeLink"
                         to="/projects"
                       >
-                        <h3 className="">Projects</h3>
+                        Projects
                       </NavLink>
                     </List.Header>
                   </List.Content>
@@ -82,11 +82,10 @@ class CustomLayout extends React.Component {
                     <List.Header>
                       <NavLink
                         className="aTagStyleBlocker"
-                        // activeClassName="activeLink"
-                        activeStyle={{ 'border-bottom': '3px solid 	#fee18b' }}
+                        activeClassName="activeLink"
                         to="/about"
                       >
-                        <h3 className="underlineHeaderText ">About</h3>
+                        About
                       </NavLink>
                     </List.Header>
                   </List.Content>
