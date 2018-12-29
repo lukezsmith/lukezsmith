@@ -15,7 +15,8 @@ import cryptoXView2 from '../images/cryptox-view-1.png';
 
 import shubotThumbnail from '../images/yt-thumbnail.jpg';
 
-function ProjectView() {
+function ProjectView(props) {
+  console.log(`project props: ${props}`);
   console.log(`project url: ${this.props.location}`);
   return (
     <div id="projectContent" className="ui container left aligned">

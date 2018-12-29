@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 import me from '../images/lukezsmith.jpg';
 import Newsletter from '../components/Newsletter';
 
-function AboutView() {
-  console.log(`about url: ${this.props.location}`);
+function AboutView(props) {
+  console.log(`about props: ${props}`);
+  console.log(`about url: ${props.location}`);
   return (
     <div className="ui container left aligned ">
       <img id="aboutImg" src={me} className="ui medium centered image" alt="" />
