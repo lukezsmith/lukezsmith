@@ -6,6 +6,8 @@ import me from '../images/lukezsmith.jpg';
 import Newsletter from '../components/Newsletter';
 
 function AboutView(props) {
+  props.callbackFromParent(props.location.pathname);
+
   console.log(`about props: ${JSON.stringify(props)}`);
   console.log(`about params: ${JSON.stringify(props.match.params)}`);
   console.log(`about url: ${JSON.stringify(props.location)}`);

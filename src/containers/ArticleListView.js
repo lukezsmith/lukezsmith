@@ -11,6 +11,7 @@ class ArticleListView extends React.Component {
   };
 
   componentDidMount() {
+    this.passLocationToParent();
     const getData = async () => {
       try {
         return await axios.get('https://lukezsmith.herokuapp.com/api/');
@@ -29,6 +30,10 @@ class ArticleListView extends React.Component {
     };
 
     evalData();
+  }
+
+  passLocationToParent() {
+    this.props.callbackFromParent(this.props.location.pathname);
   }
 
   render() {

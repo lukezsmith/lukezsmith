@@ -34,7 +34,12 @@ class CustomLayout extends React.Component {
   };
 
   render() {
-    const { children } = this.props;
+    // const { children } = this.props;
+    const children = React.Children.map(this.props.children, child =>
+      React.cloneElement(child, {
+        callbackFromParent: this.myCallback,
+      })
+    );
 
     const homeEval = () => {
       // console.log(`current pathname: ${this.props.location.pathname}`);
