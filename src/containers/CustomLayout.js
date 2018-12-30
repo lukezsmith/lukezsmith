@@ -29,20 +29,24 @@ class CustomLayout extends React.Component {
     scroll.scrollToTop();
   }
 
+  myCallback = childLocation => {
+    console.log(`this is the location passed back to CustomLayout: ${childLocation}`);
+  };
+
   render() {
     const { children } = this.props;
 
     const homeEval = () => {
-      console.log(`current pathname: ${this.props.location.pathname}`);
-      if (
-        this.props.location.pathname !== '/about' &&
-        this.props.location.pathname !== '/projects'
-      ) {
-        console.log('condition met, returning true');
-        return true;
-      }
-      console.log('condition not met, returning false');
-      return false;
+      // console.log(`current pathname: ${this.props.location.pathname}`);
+      // if (
+      //   this.props.location.pathname !== '/about' &&
+      //   this.props.location.pathname !== '/projects'
+      // ) {
+      //   console.log('condition met, returning true');
+      //   return true;
+      // }
+      // console.log('condition not met, returning false');
+      // return false;
     };
     return (
       <div className="mainSection">
