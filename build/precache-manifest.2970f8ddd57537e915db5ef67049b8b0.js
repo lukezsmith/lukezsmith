@@ -1,23 +1,47 @@
 self.__precacheManifest = [
   {
-    "revision": "d6132b6af71bbc602d83",
-    "url": "/static/css/main.ace441df.chunk.css"
+    "revision": "31863628916c791de808",
+    "url": "/static/css/main.5e605e7a.chunk.css"
   },
   {
-    "revision": "d6132b6af71bbc602d83",
-    "url": "/static/js/main.d6132b6a.chunk.js"
+    "revision": "31863628916c791de808",
+    "url": "/static/js/main.31863628.chunk.js"
   },
   {
-    "revision": "2703c028df7b983fb8ce",
-    "url": "/static/css/1.15f8f1c9.chunk.css"
+    "revision": "ce6b028c45bd201feadb",
+    "url": "/static/css/1.fea9c77c.chunk.css"
   },
   {
-    "revision": "2703c028df7b983fb8ce",
-    "url": "/static/js/1.2703c028.chunk.js"
+    "revision": "ce6b028c45bd201feadb",
+    "url": "/static/js/1.ce6b028c.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
+  },
+  {
+    "revision": "f6b5f26d3509f63bb31c9326ada2c48b",
+    "url": "/static/media/reddit.f6b5f26d.svg"
+  },
+  {
+    "revision": "77875fd744b379bb1c3cc6682b87e91b",
+    "url": "/static/media/twitter.77875fd7.svg"
+  },
+  {
+    "revision": "ed8bb44ceed962e673dd929e1ebf5a32",
+    "url": "/static/media/facebook.ed8bb44c.svg"
+  },
+  {
+    "revision": "4aac36ce48023d20d207ae23ae775ae7",
+    "url": "/static/media/email.4aac36ce.svg"
+  },
+  {
+    "revision": "c9c4c6f8504f9d54deb8a0782cac2f2a",
+    "url": "/static/media/whatsapp.c9c4c6f8.svg"
+  },
+  {
+    "revision": "aa80ba203c147024c0d00b8378ccf0ea",
+    "url": "/static/media/linkedin.aa80ba20.svg"
   },
   {
     "revision": "89b28e854c51da9e76f4d4d86ce69c55",
@@ -56,16 +80,16 @@ self.__precacheManifest = [
     "url": "/static/media/yt-thumbnail.b369c115.jpg"
   },
   {
-    "revision": "9c74e172f87984c48ddf5c8108cabe67",
-    "url": "/static/media/flags.9c74e172.png"
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/static/media/outline-icons.cd6c777f.woff2"
   },
   {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/static/media/outline-icons.ef60a4f6.woff"
   },
   {
-    "revision": "cd6c777f1945164224dee082abaea03a",
-    "url": "/static/media/outline-icons.cd6c777f.woff2"
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/static/media/flags.9c74e172.png"
   },
   {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
@@ -96,12 +120,12 @@ self.__precacheManifest = [
     "url": "/static/media/icons.8e3c7f55.eot"
   },
   {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/static/media/icons.b87b9ba5.ttf"
-  },
-  {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/static/media/brand-icons.13db00b7.eot"
+  },
+  {
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
@@ -120,7 +144,7 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "b3be605bd9a8d0ec7b2d648d22c99bc0",
+    "revision": "f69651a06e21e12a4bbb1082ad512be0",
     "url": "/index.html"
   }
 ];

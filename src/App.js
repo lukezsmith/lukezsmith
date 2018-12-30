@@ -6,7 +6,9 @@ import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import CustomLayout from './containers/CustomLayout';
 
+
 function App (){
+
     return (
       <div className="App">
         <Router>

@@ -234,8 +234,8 @@ ul{
 }
 
 .underlineLinkText{
-  font-size: 1.2rem;
-  display: inlie;
+  font-size: 1.3rem;
+  display: inline;
   border-bottom: 3px solid 	#7e9fce ;
   padding-bottom: 1px ;
 }

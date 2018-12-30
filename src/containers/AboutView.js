@@ -1,19 +1,15 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Image } from 'semantic-ui-react';
 
 import me from '../images/lukezsmith.jpg';
 import Newsletter from '../components/Newsletter';
 
-function AboutView(props) {
-  props.callbackFromParent(props.location.pathname);
-
-  console.log(`about props: ${JSON.stringify(props)}`);
-  console.log(`about params: ${JSON.stringify(props.match.params)}`);
-  console.log(`about url: ${JSON.stringify(props.location)}`);
+function AboutView() {
   return (
     <div className="ui container left aligned ">
-      <img id="aboutImg" src={me} className="ui medium centered image" alt="" />
+      <Image id="aboutImg" rounded src={me} className="ui medium centered image" alt="" />
       <h1>Hi there!</h1>
       <p id="aboutText">
         I&apos;m Luke, a Computer Science student currently studying at Durham University. I&apos;m
@@ -31,9 +27,9 @@ function AboutView(props) {
         <br />
         <br />
         The purpose of this site is to showcase the{' '}
-        <Link className="underlineHeaderText" to="/projects">
+        <NavLink className="underlineHeaderText" to="/projects">
           projects
-        </Link>{' '}
+        </NavLink>{' '}
         I have been working on and also for me to document the things I learn throughout my studies
         and career. I will also be offering my thoughts on topics/concepts that I come across every
         day. Hopefully you will find some of my thoughts and experiences interesting or useful.

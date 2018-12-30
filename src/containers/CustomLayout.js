@@ -29,29 +29,14 @@ class CustomLayout extends React.Component {
     scroll.scrollToTop();
   }
 
-  myCallback = childLocation => {
-    console.log(`this is the location passed back to CustomLayout: ${childLocation}`);
-  };
-
   render() {
     const { children } = this.props;
-    const childrenWithProps = React.Children.map(children, child =>
-      React.cloneElement(child, {
-        callbackFromParent: this.myCallback,
-      })
-    );
 
     const homeEval = () => {
-      // console.log(`current pathname: ${this.props.location.pathname}`);
-      // if (
-      //   this.props.location.pathname !== '/about' &&
-      //   this.props.location.pathname !== '/projects'
-      // ) {
-      //   console.log('condition met, returning true');
-      //   return true;
-      // }
-      // console.log('condition not met, returning false');
-      // return false;
+      if (!window.location.href.includes('/about') && !window.location.href.includes('/projects')) {
+        return true;
+      }
+      return false;
     };
     return (
       <div className="mainSection">
@@ -77,7 +62,7 @@ class CustomLayout extends React.Component {
           <Grid.Column id="centerCol" computer={10} tablet={14} mobile={16}>
             <Grid.Row id="listRow" textAlign="center">
               <List horizontal>
-                <List.Item>
+                <List.Item style={{ paddingTop: '5%' }}>
                   <List.Content>
                     <List.Header>
                       <NavLink
@@ -129,8 +114,7 @@ class CustomLayout extends React.Component {
                     verticalAlign="middle"
                     textAlign="center"
                   >
-                    {childrenWithProps}
-
+                    {children}
                     <Divider />
                     <Grid>
                       <div className="ten wide column">

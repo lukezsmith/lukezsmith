@@ -10,13 +10,7 @@ class ArticleListView extends React.Component {
     articles: null,
   };
 
-  constructor() {
-    super();
-    this.passLocationToParent = this.passLocationToParent.bind(this);
-  }
-
   componentDidMount() {
-    this.passLocationToParent();
     const getData = async () => {
       try {
         return await axios.get('https://lukezsmith.herokuapp.com/api/');
@@ -37,14 +31,7 @@ class ArticleListView extends React.Component {
     evalData();
   }
 
-  passLocationToParent() {
-    this.props.callbackFromParent(this.props.location.pathname);
-  }
-
   render() {
-    console.log(`blog props: ${JSON.stringify(this.props)}`);
-    console.log(`blog params: ${JSON.stringify(this.props.match.params)}`);
-    console.log(`blog url: ${JSON.stringify(this.props.location)}`);
     const { articles } = this.state;
     if (articles === null) {
       return null;
