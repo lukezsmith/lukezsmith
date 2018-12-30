@@ -34,8 +34,8 @@ class CustomLayout extends React.Component {
   };
 
   render() {
-    // const { children } = this.props;
-    const children = React.Children.map(this.props.children, child =>
+    const { children } = this.props;
+    const childrenWithProps = React.Children.map(children, child =>
       React.cloneElement(child, {
         callbackFromParent: this.myCallback,
       })
@@ -129,7 +129,7 @@ class CustomLayout extends React.Component {
                     verticalAlign="middle"
                     textAlign="center"
                   >
-                    {children}
+                    {childrenWithProps}
 
                     <Divider />
                     <Grid>
