@@ -1,7 +1,3 @@
-#page{
-  overflow-x: hidden;
-}
-
 .mainSection{
   background: #385e94
 }
@@ -12,6 +8,13 @@ body{
   background: #385e94;
   color: white;
   overflow-x: hidden;
+}
+
+@media only screen  and (max-width: 768px){
+  body{
+    max-width: 768px;
+    padding-left: 5%;
+  }
 }
 
 a{
@@ -151,6 +154,14 @@ ul{
   justify-items: center;
 }
 
+@media only screen and (max-width:768px){
+  #articleListMainGrid{
+    margin-left: -6%;
+    margin-right: -6%;
+    justify-items: center;
+}
+}
+
 #projectContent{
   padding-top: 5%;
 }
@@ -166,6 +177,12 @@ ul{
 #toTopButton{
   font-size: medium;
   float: right;
+}
+@media only screen and (max-width:768px){
+  #toTopButton{
+    font-size: small;
+    float: right;
+  }
 }
 
 #formField{

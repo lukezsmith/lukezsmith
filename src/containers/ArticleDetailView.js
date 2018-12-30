@@ -8,6 +8,7 @@ import ReactHtmlParser from 'react-html-parser';
 import Newsletter from '../components/Newsletter';
 import ShareButtons from '../components/ShareButtons';
 import NotFoundView from '../components/NotFoundView';
+import SocialBar from '../components/SocialBar';
 
 class ArticleDetailView extends React.Component {
   state = {
@@ -93,6 +94,7 @@ class ArticleDetailView extends React.Component {
       <div className="ui container left aligned">
         {articleHtml}
         <Newsletter />
+        <SocialBar />
       </div>
     );
   }
