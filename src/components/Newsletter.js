@@ -3,12 +3,13 @@
 import React from 'react';
 
 import Script from 'react-load-script';
-import { Button, Form, Divider } from 'semantic-ui-react';
+import { Button, Form, Divider, Container } from 'semantic-ui-react';
 
 class Newsletter extends React.Component {
   render() {
     return (
-      <div id="newsletterEmbed" className="ui container left aligned">
+      // <div id="newsletterEmbed" className="ui container center aligned">
+      <Container id="newsletterEmbed">
         <Divider />
         <Script
           url="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
@@ -45,7 +46,8 @@ class Newsletter extends React.Component {
           <input type="hidden" name="mc_signupsource" value="hosted" />
         </Form>
         <Divider id="socialDivider" />
-      </div>
+      </Container>
+      /* </div> */
     );
   }
 }

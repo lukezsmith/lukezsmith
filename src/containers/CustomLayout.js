@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { Grid, Divider, List, Icon, GridRow } from 'semantic-ui-react';
+import { Grid, List, Icon } from 'semantic-ui-react';
 import { Events, animateScroll as scroll } from 'react-scroll';
 
 class CustomLayout extends React.Component {
@@ -53,8 +53,8 @@ class CustomLayout extends React.Component {
       }
     `}</style>
 
-        <Grid id="mainGrid" columns={3}>
-          <Grid.Column computer={3} tablet={1} mobile={0}>
+        <Grid id="mainGrid" columns={2}>
+          <Grid.Column computer={3} tablet={2} mobile={0}>
             <NavLink className="aTagStyleBlocker" to="/">
               <h2 className="underlineHeaderText leftHeaderColText ">lukezsmith</h2>
             </NavLink>
@@ -111,42 +111,11 @@ class CustomLayout extends React.Component {
                     computer={14}
                     tablet={14}
                     mobile={16}
+                    id="testCol"
                     verticalAlign="middle"
                     textAlign="center"
                   >
                     {children}
-
-                    {/* <Grid>
-                      <div className="ten wide column">
-                        <div className="ui container left aligned">
-                          <a className="aTagStyleBlocker" href="https://twitter.com/lukezsmith">
-                            <i className=" big twitter icon" />
-                          </a>
-                          <a className="aTagStyleBlocker" href="https://www.facebook.com/lukezs">
-                            <i className="big facebook icon" />
-                          </a>
-                          <a className="aTagStyleBlocker" href="https://github.com/lukezsmith">
-                            <i className="big github icon" />
-                          </a>
-                          <a
-                            className="aTagStyleBlocker"
-                            href="https://www.linkedin.com/in/luke-smith-a47931168/"
-                          >
-                            <i className="big linkedin icon" />
-                          </a>
-                        </div>
-                      </div>
-                      <div className="six wide column right aligned">
-                        <a
-                          id="toTopButton"
-                          className="underlineHeaderText"
-                          onClick={this.scrollToTop}
-                        >
-                          Back to top
-                        </a>
-                      </div>
-                    </Grid> */}
-                    {/* <Divider id="socialDivider" /> */}
                     <Grid id="socialGrid" columns={2}>
                       <Grid.Column id="socialList" width={10}>
                         <a className="aTagStyleBlocker" href="https://twitter.com/lukezsmith">
@@ -180,7 +149,6 @@ class CustomLayout extends React.Component {
               </Grid>
             </Grid.Row>
           </Grid.Column>
-          {/* <Grid.Column computer={3} tablet={1} mobile={0} only="large screen " /> */}
         </Grid>
       </div>
     );

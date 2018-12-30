@@ -1,5 +1,5 @@
 #page{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .mainSection{
@@ -11,7 +11,7 @@ body{
     "helvetica","ubuntu","roboto","noto","segoe ui","arial",sans-serif;
   background: #385e94;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a{
@@ -116,6 +116,7 @@ ul{
   padding-right: 10%;
 }
 }
+
 @media only screen and (min-width: 768px){
   #listRow{
     margin-left: 6.5%;
@@ -147,6 +148,7 @@ ul{
 
 #articleListMainGrid{
   padding-top: 2%;
+  justify-items: center;
 }
 
 #projectContent{
@@ -247,7 +249,7 @@ ul{
 }
 
 #newsletterEmbed{
-  margin-bottom: 10%; 
+  margin-bottom: 10%;
 }
 
 .projectSegments{
@@ -278,7 +280,6 @@ ul{
 }
 
 #socialList{
-  /* padding-left: 6.5%; */
   display:flex;
   float: left;
 }
