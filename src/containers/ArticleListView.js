@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Grid } from 'semantic-ui-react';
+import { Grid, Divider } from 'semantic-ui-react';
 import Article from '../components/Article';
 import Newsletter from '../components/Newsletter';
 
@@ -49,10 +49,12 @@ class ArticleListView extends React.Component {
       );
     }
     return (
-      <Grid.Column id="articleListMainGrid" width={11}>
-        {posts}
-        <Newsletter />
-      </Grid.Column>
+      <div>
+        <Grid.Column id="articleListMainGrid" width={11}>
+          {posts}
+          <Newsletter />
+        </Grid.Column>
+      </div>
     );
   }
 }

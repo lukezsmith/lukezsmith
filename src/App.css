@@ -58,10 +58,20 @@ ul{
   height: 100px;
 }
 
-.leftHeaderColText{
-  margin-left: 55%;
-  margin-top: 0%;
+@media only screen and (min-width: 768px){
+  .leftHeaderColText{
+    margin-left: 55%;
+    margin-top: 0%;
+  }
 }
+
+@media only screen and (max-width: 768px){
+  .leftHeaderColText{
+    margin-left: 30%;
+    margin-top: 0%;
+  }
+}
+
 
 .rightHeaderCol{
   margin-top: 3.4%;
@@ -101,11 +111,20 @@ ul{
   padding-right: 10%;
 }
 }
+@media only screen and (min-width: 768px){
+  #listRow{
+    margin-left: 6.5%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
 
-#listRow{
-  margin-left: 6.5%;
-  display: flex;
-  justify-content: flex-start;
+@media only screen and (max-width: 768px){
+  #listRow{
+    margin-left: 4%;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 #aboutText{
@@ -139,6 +158,7 @@ ul{
 
 #toTopButton{
   font-size: medium;
+  float: right;
 }
 
 #formField{
@@ -243,4 +263,25 @@ ul{
 
 .underlineLinkText:hover{
   border-bottom: 3px solid 	#fee18b; 
+}
+
+/* @media only screen and (max-width: 768px){
+  #socialGrid{
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+} */
+
+#socialList{
+  /* padding-left: 6.5%; */
+  display:flex;
+  float: left;
+}
+
+#socialDivider{
+  margin-top: 7%;
+}
+
+#socialGrid{
+  margin-top: -10%;
 }

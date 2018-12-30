@@ -44,6 +44,7 @@ class Newsletter extends React.Component {
           />
           <input type="hidden" name="mc_signupsource" value="hosted" />
         </Form>
+        <Divider id="socialDivider" />
       </div>
     );
   }
