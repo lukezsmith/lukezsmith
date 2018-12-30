@@ -10,6 +10,11 @@ class ArticleListView extends React.Component {
     articles: null,
   };
 
+  constructor() {
+    super();
+    this.passLocationToParent = this.passLocationToParent.bind(this);
+  }
+
   componentDidMount() {
     this.passLocationToParent();
     const getData = async () => {
