@@ -154,13 +154,13 @@ ul{
   justify-items: center;
 }
 
-@media only screen and (max-width:768px){
+/* @media only screen and (max-width:768px){
   #articleListMainGrid{
     margin-left: -6%;
     margin-right: -6%;
     justify-items: center;
 }
-}
+} */
 
 #projectContent{
   padding-top: 5%;
