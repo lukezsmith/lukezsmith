@@ -3,6 +3,7 @@ import React from 'react';
 import { Grid, Image, Embed, Segment } from 'semantic-ui-react';
 
 import Newsletter from '../components/Newsletter';
+import SocialBar from '../components/SocialBar';
 
 import journeyPlannerLogo from '../images/journey-planner-logo.png';
 import journeyPlannerView1 from '../images/journey-planner-view.png';
@@ -117,6 +118,7 @@ function ProjectView() {
         </p>
       </Segment>
       <Newsletter />
+      <SocialBar />
     </div>
   );
 }

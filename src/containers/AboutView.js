@@ -5,6 +5,7 @@ import { Image } from 'semantic-ui-react';
 
 import me from '../images/lukezsmith.jpg';
 import Newsletter from '../components/Newsletter';
+import SocialBar from '../components/SocialBar';
 
 function AboutView() {
   return (
@@ -37,6 +38,7 @@ function AboutView() {
         <br />
       </p>
       <Newsletter />
+      <SocialBar />
     </div>
   );
 }

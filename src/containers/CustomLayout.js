@@ -4,31 +4,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { Grid, List, Icon } from 'semantic-ui-react';
-import { Events, animateScroll as scroll } from 'react-scroll';
+import { Grid, List } from 'semantic-ui-react';
 
 class CustomLayout extends React.Component {
-  constructor(props) {
-    super(props);
-    this.scrollToTop = this.scrollToTop.bind(this);
-  }
-
-  componentDidMount() {
-    Events.scrollEvent.register('begin', () => {});
-
-    Events.scrollEvent.register('end', () => {});
-  }
-
-  componentWillUnmount() {
-    Events.scrollEvent.remove('begin');
-    Events.scrollEvent.remove('end');
-  }
-
-  // eslint-disable-next-line class-methods-use-this
-  scrollToTop() {
-    scroll.scrollToTop();
-  }
-
   render() {
     const { children } = this.props;
 
@@ -116,34 +94,6 @@ class CustomLayout extends React.Component {
                     textAlign="center"
                   >
                     {children}
-                    <Grid id="socialGrid" columns={2}>
-                      <Grid.Column id="socialList" width={10}>
-                        <a className="aTagStyleBlocker" href="https://twitter.com/lukezsmith">
-                          <Icon name="twitter" size="big" />
-                        </a>
-                        <a className="aTagStyleBlocker" href="https://www.facebook.com/lukezs">
-                          <Icon name="facebook" size="big" />
-                        </a>
-                        <a className="aTagStyleBlocker" href="https://github.com/lukezsmith">
-                          <Icon name="github" size="big" />
-                        </a>
-                        <a
-                          className="aTagStyleBlocker"
-                          href="https://www.linkedin.com/in/luke-smith-a47931168/"
-                        >
-                          <Icon name="linkedin" size="big" />
-                        </a>
-                      </Grid.Column>
-                      <Grid.Column id="toTopCol" width={6}>
-                        <a
-                          id="toTopButton"
-                          className="underlineHeaderText"
-                          onClick={this.scrollToTop}
-                        >
-                          Back to top
-                        </a>
-                      </Grid.Column>
-                    </Grid>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>

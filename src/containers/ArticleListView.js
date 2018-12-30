@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Grid } from 'semantic-ui-react';
 import Article from '../components/Article';
 import Newsletter from '../components/Newsletter';
+import SocialBar from '../components/SocialBar';
 
 class ArticleListView extends React.Component {
   state = {
@@ -49,11 +50,12 @@ class ArticleListView extends React.Component {
       );
     }
     return (
-      <div>
+      <div className="ui container left aligned">
         <Grid.Column id="articleListMainGrid" width={11}>
           {posts}
           <Newsletter />
         </Grid.Column>
+        <SocialBar />
       </div>
     );
   }
