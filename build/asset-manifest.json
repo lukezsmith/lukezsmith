@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.09374976.chunk.css",
-  "main.js": "/static/js/main.d3263f82.chunk.js",
-  "main.js.map": "/static/js/main.d3263f82.chunk.js.map",
+  "main.js": "/static/js/main.c2e8a541.chunk.js",
+  "main.js.map": "/static/js/main.c2e8a541.chunk.js.map",
   "static/css/1.708e356c.chunk.css": "/static/css/1.708e356c.chunk.css",
   "static/js/1.ba86ad9d.chunk.js": "/static/js/1.ba86ad9d.chunk.js",
   "static/js/1.ba86ad9d.chunk.js.map": "/static/js/1.ba86ad9d.chunk.js.map",
@@ -23,9 +23,9 @@
   "static/media/cryptox-view-1.png": "/static/media/cryptox-view-1.7481f1ab.png",
   "static/media/yt-thumbnail.jpg": "/static/media/yt-thumbnail.b369c115.jpg",
   "static/media/semantic.min.css": "/static/media/brand-icons.a1a749e8.svg",
-  "static/css/main.09374976.chunk.css.map": "/static/css/main.09374976.chunk.css.map",
   "static/css/1.708e356c.chunk.css.map": "/static/css/1.708e356c.chunk.css.map",
+  "static/css/main.09374976.chunk.css.map": "/static/css/main.09374976.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.2a7d77d84dfdc1b81d94ce1df19a3267.js": "/precache-manifest.2a7d77d84dfdc1b81d94ce1df19a3267.js",
+  "precache-manifest.5b70fc2cec602bb0a66b64ab735e223d.js": "/precache-manifest.5b70fc2cec602bb0a66b64ab735e223d.js",
   "service-worker.js": "/service-worker.js"
 }

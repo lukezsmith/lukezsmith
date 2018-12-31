@@ -21,8 +21,7 @@ class ArticleDetailView extends React.Component {
 
     const getData = async () => {
       try {
-        // return await axios.get(`https://lukezsmith.herokuapp.com/api/${articleSlug}/`);
-        return await axios.get(`http://127.0.0.1:8000/api/${articleSlug}/`);
+        return await axios.get(`https://lukezsmith.herokuapp.com/api/${articleSlug}/`);
       } catch (error) {
         this.setState({ article: '404' });
       }

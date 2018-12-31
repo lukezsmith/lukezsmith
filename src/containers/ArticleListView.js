@@ -14,8 +14,7 @@ class ArticleListView extends React.Component {
   componentDidMount() {
     const getData = async () => {
       try {
-        // return await axios.get('https://lukezsmith.herokuapp.com/api/');
-        return await axios.get('http://127.0.0.1:8000/api/');
+        return await axios.get('https://lukezsmith.herokuapp.com/api/');
       } catch (error) {
         this.setState({ articles: '404' });
       }
