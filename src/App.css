@@ -65,7 +65,7 @@ body{
 
 @media (max-width: 768px){
   body{
-    max-width: 390px;
+    max-width: 360px;
     padding-left: 4%;
   }
 }
