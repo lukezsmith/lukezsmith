@@ -65,7 +65,7 @@ body{
 
 @media (max-width: 768px){
   body{
-    max-width: 690px;
+    max-width: 390px;
     padding-left: 4%;
   }
 }
@@ -92,8 +92,6 @@ body{
     margin-top: 0%;
   }
 }
-
-/* Laptop sizes*/
 
 a{
   display: inline;
