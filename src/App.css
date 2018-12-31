@@ -65,15 +65,16 @@ body{
 
 @media (max-width: 768px){
   body{
-    max-width: 360px;
-    padding-left: 4%;
+    max-width: 340px;
+    padding-left: 7%;
+    padding-right: 0%;
   }
 }
 
 @media (max-width:768px){
   #articleListMainGrid{
     margin-left: -4%;
-    margin-right: -5.5%;
+    margin-right: -8%;
     justify-items: center;
 }
 }
