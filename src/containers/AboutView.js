@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 
 import { NavLink } from 'react-router-dom';
@@ -34,6 +35,14 @@ function AboutView() {
         I have been working on and also for me to document the things I learn throughout my studies
         and career. I will also be offering my thoughts on topics/concepts that I come across every
         day. Hopefully you will find some of my thoughts and experiences interesting or useful.
+        <br />
+        <br />
+        If you would like to get in touch, please contact me on my{' '}
+        <a className="underlineHeaderText" href="https://twitter.com/lukezsmith">
+          Twitter
+        </a>
+        {' '}
+        or any of my other social accounts that can be found at the bottom of the page.
         <br />
         <br />
       </p>

@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import { Divider } from 'semantic-ui-react';
-import { DiscussionEmbed } from 'disqus-react';
 import ReactHtmlParser from 'react-html-parser';
 
 import Newsletter from '../components/Newsletter';
@@ -47,8 +46,6 @@ class ArticleDetailView extends React.Component {
 
   render() {
     const { article, publishedDate, htmlContent } = this.state;
-    let disqusShortname = '';
-    let disqusConfig = {};
     if (article === null) {
       return null;
     }
@@ -60,12 +57,6 @@ class ArticleDetailView extends React.Component {
     );
 
     if (article.data !== undefined) {
-      disqusShortname = 'lukezsmith';
-      disqusConfig = {
-        url: `https://lukezsmith.herokuapp.com/${article.data.slug}/`,
-        identifier: article.data.id,
-        title: article.data.title,
-      };
       articleHtml = (
         <div>
           <img id="articleImg" src={article.data.image} className="ui massive image" alt="" />
@@ -74,6 +65,19 @@ class ArticleDetailView extends React.Component {
           <div className="articleContent">
             <p>{article.data.lead}</p>
             <div>{ReactHtmlParser(htmlContent)}</div>
+            <h2>Enjoyed this post? Have anything to add?</h2>
+            <p>
+              My articles are always a work in progress, so if you have any feedback or corrections,
+              please let me know on my{' '}
+              <a className="underlineHeaderText" href="https://twitter.com/lukezsmith">
+                Twitter
+              </a>
+              .
+              <br />
+              <br />
+              If you liked this post, please be sure to subscribe to my newsletter at the bottom of
+              the page. Thanks!
+            </p>
           </div>
           <Divider />
           <div id="socialEmbed">
@@ -81,10 +85,6 @@ class ArticleDetailView extends React.Component {
               url={`https://lukezsmith.herokuapp.com/${article.data.slug}/`}
               title={article.data.title}
             />
-          </div>
-          <div id="disqusEmbed">
-            <Divider />
-            <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
           </div>
         </div>
       );
