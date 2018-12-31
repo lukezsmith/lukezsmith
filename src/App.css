@@ -34,6 +34,11 @@ body{
     justify-content: flex-start;
   }
 }
+@media only screen and (max-width: 375px){
+  div.articleContent > div > img{
+    max-width: 315px;
+  }
+}
 
 /* Large mobile sizes*/
 
@@ -58,6 +63,13 @@ body{
     margin-left: 0%;
     display: flex;
     justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  div.articleContent > div > img{
+    max-width: 300px;
+    margin-right: -5.5%;
   }
 }
 
@@ -91,6 +103,19 @@ body{
   .leftHeaderColText{
     margin-left: 30%;
     margin-top: 0%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  div.articleContent > div > img{
+    max-width: 300px;
+    margin-right: -8%;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  div.articleContent > div > img{
+    max-width: 100%;
   }
 }
 
@@ -364,3 +389,13 @@ ul{
 #socialGrid{
   margin-top: -10%;
 }
+
+/* #articleImg{
+  margin-top: 1%;
+  padding-bottom: 2%;
+} */
+
+div.articleContent > div > img{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}  
