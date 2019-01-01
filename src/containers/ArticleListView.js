@@ -40,7 +40,7 @@ class ArticleListView extends React.Component {
 
     let posts = <h1>Oops! No posts yet, please check again later.</h1>;
 
-    if (articles.data !== undefined && articles.data !== '404' && articles !== []) {
+    if (articles.data !== undefined && articles.data !== '404' && articles.data.length !== 0) {
       posts = (
         <ul id="articleList">
           {articles.data.map(article => (
