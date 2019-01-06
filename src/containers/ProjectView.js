@@ -105,7 +105,7 @@ function ProjectView() {
           </a>
           <br />
           <br />
-          An automated tool to purchase limited items faster faster by automation. The tool supports
+          An automated tool to purchase limited items faster by automation. The tool supports
           the following sites: SneakersNStuff.com, Offspring.com, SlamJamSocialism.com and
           Titolo.ch.
           <Embed
