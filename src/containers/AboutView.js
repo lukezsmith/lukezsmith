@@ -24,7 +24,7 @@ function AboutView() {
         <br />
         My main interests lie in Computer Science with a preference for robotics and artificial
         intelligence and a heavy slant towards anything aerospace-related. My dream is to make
-        serious contributions towards space exploration within the aerospace industry through Computer Science.
+        serious contributions towards space exploration within the aerospace industry through computer science.
         <br />
         <br />
         The purpose of this site is to showcase the{' '}
