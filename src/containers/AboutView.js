@@ -18,14 +18,13 @@ function AboutView() {
         based in London/Durham, UK and I love to design and create software.
         <br />
         <br />
-        I am experienced with Python, Java, C# and Javascript. I also have a lot of web (including
-        this site!), mobile and desktop development experience. I enjoy working on open source
+        I am experienced with Python, Java, C# and Javascript. I also have a lot of web, mobile and desktop development experience. I enjoy working on open source
         projects as well as my own ideas.
         <br />
         <br />
         My main interests lie in Computer Science with a preference for robotics and artificial
         intelligence and a heavy slant towards anything aerospace-related. My dream is to make
-        serious contributions towards space exploration within the aerospace industry.
+        serious contributions towards space exploration within the aerospace industry through Computer Science.
         <br />
         <br />
         The purpose of this site is to showcase the{' '}
