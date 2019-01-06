@@ -22,7 +22,7 @@ function AboutView() {
         projects as well as my own ideas.
         <br />
         <br />
-        My main interests lie in Computer Science with a preference for robotics and artificial
+        My main interests lie in computer science with a preference for robotics and artificial
         intelligence and a heavy slant towards anything aerospace-related. My dream is to make
         serious contributions towards space exploration within the aerospace industry through computer science.
         <br />
