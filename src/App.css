@@ -1,6 +1,11 @@
 .mainSection{
   background: #385e94
 }
+/* Force scrollbar in order to make all pages the same */
+.mainSection{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
 body{
   font-family: -apple-system, BlinkMacSystemFont , "avenir next","avenir","helvetica neue",
@@ -8,6 +13,7 @@ body{
   background: #385e94;
   color: white;
   overflow-x: hidden;
+  /* overflow-y: visible !important; */
 }
 
 /* Small mobile sizes*/

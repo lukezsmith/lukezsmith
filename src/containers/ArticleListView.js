@@ -50,12 +50,14 @@ class ArticleListView extends React.Component {
       );
     }
     return (
+      <div className="articleView">
       <div className="ui container left aligned">
         <Grid.Column id="articleListMainGrid" width={11}>
           {posts}
           <Newsletter />
         </Grid.Column>
         <SocialBar />
+      </div>
       </div>
     );
   }
