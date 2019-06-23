@@ -2,10 +2,6 @@
   background: #385e94
 }
 /* Force scrollbar in order to make all pages the same */
-.mainSection{
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
 
 body{
   font-family: -apple-system, BlinkMacSystemFont , "avenir next","avenir","helvetica neue",
@@ -215,6 +211,14 @@ ul{
 #mainGrid{
   align-self: center;
   padding-top: 3%;
+}
+
+/* Force scrollbar on root page on devices larger than tablets */
+@media only screen and (min-width: 768px){
+.mainSection{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 }
 @media only screen and (min-width: 768px){
 #centerCol{
