@@ -156,3 +156,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 ACCOUNT_EMAIL_REQUIRED = False
+
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
