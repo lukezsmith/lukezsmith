@@ -24,7 +24,7 @@ SECRET_KEY = '+2i#a_2ryra6y3_g_6hb9b(w&*xy^axcb2jsh3#b7ppbp*$2ju'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'lukezsmith.herokuapp.com', 'www.lukezsmith.com','lukezsmith.com']
+ALLOWED_HOSTS = ['localhost', '192.168.0.121','127.0.0.1', 'lukezsmith.herokuapp.com', 'www.lukezsmith.com','lukezsmith.com']
 
 
 # Application definition
