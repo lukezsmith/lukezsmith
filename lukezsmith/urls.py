@@ -19,7 +19,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('admin-site/login/', admin.site.urls),
-    path('api/', include('blogposts.api.urls')),
+    path('api-site/', include('blogposts.api.urls')),
     path('rest-auth/', include('rest_auth.urls')),
     re_path('.*', TemplateView.as_view(template_name="index.html")),
     
