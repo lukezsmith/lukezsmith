@@ -65,6 +65,7 @@ class ArticleDetailView extends React.Component {
           <div className="articleContent">
             <p>{article.data.lead}</p>
             <div>{ReactHtmlParser(htmlContent)}</div>
+            <Divider/>
             <h2>Enjoyed this post? Have anything to add?</h2>
             <p>
               My articles are always a work in progress, so if you have any feedback or corrections,
@@ -79,7 +80,7 @@ class ArticleDetailView extends React.Component {
               the page. Thanks!
             </p>
           </div>
-          <Divider />
+          <Divider id="twitterPromptDiv" />
           <div id="socialEmbed">
             <ShareButtons
               url={`https://lukezsmith.herokuapp.com/${article.data.slug}/`}
