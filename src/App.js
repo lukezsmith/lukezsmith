@@ -7,13 +7,15 @@ import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import CustomLayout from './containers/CustomLayout';
 
-ReactGA.initialize('UA-142802186-1')
 
-function fireTracking() {
-  ReactGA.pageview(window.location.hash);
-}
 
 function App (){
+
+  ReactGA.initialize('UA-142802186-1');
+
+  function fireTracking() {
+    ReactGA.pageview(window.location.hash);
+  }
     return (
       <div className="App">
         <Router onUpdate={fireTracking}>
