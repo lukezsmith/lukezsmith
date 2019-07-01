@@ -400,9 +400,9 @@ ul{
   margin-top: -10%;
 }
 
-#articleImg{
+/* #articleImg{
   margin-top: 6%;
-}
+} */
 
 div.articleContent > div > img{
   padding-top: 2%;
@@ -412,4 +412,8 @@ div.articleContent > div > img{
 #twitterPromptDiv{
   padding-bottom: 0;
   margin: 0;
+}
+
+.articleDetailContent{
+  padding-top: 5%
 }

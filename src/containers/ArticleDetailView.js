@@ -58,7 +58,7 @@ class ArticleDetailView extends React.Component {
 
     if (article.data !== undefined) {
       articleHtml = (
-        <div>
+        <div id="articleDetailContent">
           <img id="articleImg" src={article.data.image} className="ui large image" alt="" />
           <h1 className="contentTitle">{article.data.title}</h1>
           <p className="contentDate">{publishedDate}</p>
