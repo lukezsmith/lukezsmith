@@ -9,6 +9,24 @@ import ShareButtons from '../components/ShareButtons';
 import NotFoundView from '../components/NotFoundView';
 import SocialBar from '../components/SocialBar';
 
+function WithImageArticleImage(props) {
+  const image = props.image;
+  return <img id="withImageArticleImage" src={image} className="ui large image" alt="" />;
+}
+
+function WithoutImageArticleImage(props) {
+  const image = props.image;
+  return <img src={image} className="ui large image" alt="" />;
+}
+
+function ArticleImage(props) {
+  const imageUrl = props.imageUrl
+  if (imageUrl === ''){
+    return <WithoutImageArticleImage image={imageUrl} />;
+  }
+  return <WithImageArticleImage image={imageUrl} />;
+}
+
 class ArticleDetailView extends React.Component {
   state = {
     article: null,
@@ -59,13 +77,13 @@ class ArticleDetailView extends React.Component {
     if (article.data !== undefined) {
       articleHtml = (
         <div id="articleDetailContent">
-          <img id="articleImg" src={article.data.image} className="ui large image" alt="" />
+          <ArticleImage imageUrl={article.data.image} />
           <h1 className="contentTitle">{article.data.title}</h1>
           <p className="contentDate">{publishedDate}</p>
           <div className="articleContent">
             <p>{article.data.lead}</p>
             <div>{ReactHtmlParser(htmlContent)}</div>
-            <Divider/>
+            <Divider />
             <h2>Enjoyed this post? Have anything to add?</h2>
             <p>
               My articles are always a work in progress, so if you have any feedback or corrections,
