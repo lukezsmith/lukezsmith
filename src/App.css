@@ -400,10 +400,9 @@ ul{
   margin-top: -10%;
 }
 
-/* #articleImg{
-  margin-top: 1%;
-  padding-bottom: 2%;
-} */
+#articleImg{
+  margin-top: 6%;
+}
 
 div.articleContent > div > img{
   padding-top: 2%;
