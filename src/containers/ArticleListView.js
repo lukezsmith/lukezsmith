@@ -38,19 +38,11 @@ class ArticleListView extends React.Component {
       return null;
     }
 
-    // const invisibleArticles = articles.data.some(article => article.is_visible === false);
-    // articles.data.splice(invisibleArticles);
-    articles.data.forEach(function(item, index, object ) {
-      if (item.is_visible === false){
-        articles.data.splice(index, 1);  
-      }       
+    articles.data.forEach((item, index) => {
+      if (item.is_visible === false) {
+        articles.data.splice(index, 1);
+      }
     });
-    // for (Object.keys() in articles){
-    //   if (article.is_visible = false){
-    //     var index = indexOf(article);
-    //     articles.splice(index,1)
-    //   }
-    // }
 
     let posts = <h1>Oops! No posts yet, please check again later.</h1>;
 
@@ -65,13 +57,13 @@ class ArticleListView extends React.Component {
     }
     return (
       <div className="articleView">
-      <div className="ui container left aligned">
-        <Grid.Column id="articleListMainGrid" width={11}>
-          {posts}
-          <Newsletter />
-        </Grid.Column>
-        <SocialBar />
-      </div>
+        <div className="ui container left aligned">
+          <Grid.Column id="articleListMainGrid" width={11}>
+            {posts}
+            <Newsletter />
+          </Grid.Column>
+          <SocialBar />
+        </div>
       </div>
     );
   }

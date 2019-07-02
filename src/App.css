@@ -9,7 +9,6 @@ body{
   background: #385e94;
   color: white;
   overflow-x: hidden;
-  /* overflow-y: visible !important; */
 }
 
 /* Small mobile sizes*/
@@ -26,7 +25,7 @@ body{
     margin-left: -5.5%;
     margin-right: -5.5%;
     justify-items: center;
-}
+  }
 }
 
 @media only screen and (max-width: 375px){
@@ -115,9 +114,32 @@ body{
   }
 }
 
+@media only screen and (max-width:768px){
+  #toTopButton{
+    font-size: small;
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  #socialGrid{
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+/* Laptop+ Sizes */
+
 @media only screen and (min-width: 768px){
   div.articleContent > div > img{
     max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .leftHeaderColText{
+    margin-left: 55%;
+    margin-top: 0%;
   }
 }
 
@@ -170,16 +192,6 @@ ul{
   height: 100px;
 }
 
-@media only screen and (min-width: 768px){
-  .leftHeaderColText{
-    margin-left: 55%;
-    margin-top: 0%;
-  }
-}
-
-
-
-
 .rightHeaderCol{
   margin-top: 3.4%;
 }
@@ -191,7 +203,6 @@ ul{
 }
 
 .contentTitle{
-  /* margin-top: 1%; */
   padding-bottom: 1%;
   font-size: 3rem;
   font-weight: bolder;
@@ -215,16 +226,17 @@ ul{
 
 /* Force scrollbar on root page on devices larger than tablets */
 @media only screen and (min-width: 768px){
-.mainSection{
-  overflow-x: hidden;
-  overflow-y: scroll;
+  .mainSection{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
-}
+
 @media only screen and (min-width: 768px){
-#centerCol{
-  padding-left: 10%;
-  padding-right: 10%;
-}
+  #centerCol{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 @media only screen and (min-width: 768px){
@@ -268,12 +280,6 @@ ul{
 #toTopButton{
   font-size: medium;
   float: right;
-}
-@media only screen and (max-width:768px){
-  #toTopButton{
-    font-size: small;
-    float: right;
-  }
 }
 
 #formField{
@@ -378,13 +384,6 @@ ul{
 
 .underlineLinkText:hover{
   border-bottom: 3px solid 	#fee18b; 
-}
-
-@media only screen and (max-width: 768px){
-  #socialGrid{
-    padding-left: 4%;
-    padding-right: 4%;
-  }
 }
 
 #socialList{

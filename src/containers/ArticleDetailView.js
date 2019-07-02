@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import moment from 'moment';
 import { Divider } from 'semantic-ui-react';
@@ -10,18 +11,18 @@ import NotFoundView from '../components/NotFoundView';
 import SocialBar from '../components/SocialBar';
 
 function WithImageArticleImage(props) {
-  const image = props.image;
+  const { image } = props;
   return <img id="withImageArticleImage" src={image} className="ui large image" alt="" />;
 }
 
 function WithoutImageArticleImage(props) {
-  const image = props.image;
+  const { image } = props;
   return <img src={image} className="ui large image" alt="" />;
 }
 
 function ArticleImage(props) {
-  const imageUrl = props.imageUrl
-  if (imageUrl === ''){
+  const { imageUrl } = props;
+  if (imageUrl === '') {
     return <WithoutImageArticleImage image={imageUrl} />;
   }
   return <WithImageArticleImage image={imageUrl} />;
@@ -122,4 +123,17 @@ class ArticleDetailView extends React.Component {
     );
   }
 }
+
+WithImageArticleImage.propTypes = {
+  image: PropTypes.string.isRequired,
+};
+
+WithoutImageArticleImage.propTypes = {
+  image: PropTypes.string.isRequired,
+};
+
+ArticleImage.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+};
+
 export default ArticleDetailView;

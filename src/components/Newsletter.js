@@ -8,7 +8,6 @@ import { Button, Form, Divider, Container } from 'semantic-ui-react';
 class Newsletter extends React.Component {
   render() {
     return (
-      // <div id="newsletterEmbed" className="ui container center aligned">
       <Container id="newsletterEmbed">
         <Divider />
         <Script
