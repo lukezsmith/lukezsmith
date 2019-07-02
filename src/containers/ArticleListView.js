@@ -38,6 +38,20 @@ class ArticleListView extends React.Component {
       return null;
     }
 
+    // const invisibleArticles = articles.data.some(article => article.is_visible === false);
+    // articles.data.splice(invisibleArticles);
+    articles.data.forEach(function(item, index, object ) {
+      if (item.is_visible === false){
+        articles.data.splice(index, 1);  
+      }       
+    });
+    // for (Object.keys() in articles){
+    //   if (article.is_visible = false){
+    //     var index = indexOf(article);
+    //     articles.splice(index,1)
+    //   }
+    // }
+
     let posts = <h1>Oops! No posts yet, please check again later.</h1>;
 
     if (articles.data !== undefined && articles.data !== '404' && articles.data.length !== 0) {
