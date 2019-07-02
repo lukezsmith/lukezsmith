@@ -14,17 +14,16 @@ function AboutView() {
       <Image id="aboutImg" rounded src={me} className="ui medium centered image" alt="" />
       <h1>Hi there!</h1>
       <p id="aboutText">
-        I&apos;m Luke, a Computer Science student currently studying at Durham University. I&apos;m
-        based in London/Durham, UK and I love to design and create software.
+        I&apos;m Luke, a Computer Science student at the University of Durham. I&apos;m
+        based in London/Durham, UK and I love to design and build software.
         <br />
         <br />
         I am experienced with Python, Java, C# and Javascript. I also have a lot of web, mobile and desktop development experience. I enjoy working on open source
         projects as well as my own ideas.
         <br />
         <br />
-        My main interests lie in computer science with a preference for robotics and artificial
-        intelligence and a heavy slant towards anything aerospace-related. My dream is to make
-        serious contributions towards space exploration within the aerospace industry through computer science.
+        My main interests lie in computer science with a preference for applications that solve actual, 
+        real life problems. Hence, I am always on the lookout for real problems and their corresponding solutions.
         <br />
         <br />
         The purpose of this site is to showcase the{' '}
