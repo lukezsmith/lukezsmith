@@ -11,7 +11,7 @@ class Blogpost(models.Model):
     published_date = models.DateTimeField(auto_now_add=True)
     edited_date = models.DateTimeField(auto_now=True)
     image = models.CharField(blank=True, max_length=1000)
-    is_visible = models.BooleanField(default=True)
+    is_visible = models.BooleanField(default=False)
  #    tags  
 
     def save(self, *args, **kwargs):

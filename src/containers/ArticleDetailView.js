@@ -33,7 +33,6 @@ class ArticleDetailView extends React.Component {
     article: null,
     publishedDate: null,
     htmlContent: '',
-    isVisible: null,
   };
 
   componentDidMount() {
@@ -58,9 +57,6 @@ class ArticleDetailView extends React.Component {
         this.setState({
           htmlContent: this.state.article.data.content,
         });
-        this.setState({
-          isVisible: this.state.article.data.is_visible,
-        });
       }
     };
 
@@ -68,7 +64,7 @@ class ArticleDetailView extends React.Component {
   }
 
   render() {
-    const { article, publishedDate, htmlContent, isVisible } = this.state;
+    const { article, publishedDate, htmlContent } = this.state;
     if (article === null) {
       return null;
     }
@@ -79,7 +75,7 @@ class ArticleDetailView extends React.Component {
       </div>
     );
 
-    if (article.data !== undefined && isVisible !== false) {
+    if (article.data !== undefined) {
       articleHtml = (
         <div id="articleDetailContent">
           <ArticleImage imageUrl={article.data.image} />
