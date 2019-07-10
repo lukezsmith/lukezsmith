@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.utils import timezone
 
 # Create your models here.
 
@@ -8,7 +9,7 @@ class Blogpost(models.Model):
     slug = models.SlugField(blank=True)
     lead = models.CharField(max_length=1000)
     content = models.TextField()
-    published_date = models.DateTimeField(auto_now_add=True)
+    published_date = models.DateField(default=timezone.now)
     edited_date = models.DateTimeField(auto_now=True)
     image = models.CharField(blank=True, max_length=1000)
     is_visible = models.BooleanField(default=False)
