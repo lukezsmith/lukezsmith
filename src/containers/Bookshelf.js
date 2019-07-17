@@ -12,7 +12,6 @@ class Bookshelf extends React.Component {
   };
 
   componentDidMount() {
-    console.log('loaded ');
     const getData = async () => {
       try {
         return await axios.get('https://lukezsmith.herokuapp.com/api-site/books/books/');
@@ -45,7 +44,22 @@ class Bookshelf extends React.Component {
       }
     });
 
-    let posts = <h1>Oops! No posts yet, please check again later.</h1>;
+    let posts = (
+      <div id="bookshelfContent" className="ui container left aligned">
+        <h1>Bookshelf</h1>
+        <p id="aboutText">
+          I enjoy keeping track of the books I've read and maybe some other people will be
+          interested to see. Hence, below is a list of all the books I've read.
+          <br />
+          <br />
+          For the sake of organisation, I've decided to highlight those I found outstanding with
+          <span className="yellow_text"> yellow</span> and above average books in{' '}
+          <span className="lightblue_text"> light blue</span>. The list is ordered chronologically,
+          with recent reads at the top:
+        </p>
+        <p>Oops! No books have been added yet, please check again later.</p>;
+      </div>
+    );
 
     if (
       articles.data !== undefined &&
