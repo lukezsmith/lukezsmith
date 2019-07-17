@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     'blogposts',
+    'books',
 ]
 
 SITE_ID = 1

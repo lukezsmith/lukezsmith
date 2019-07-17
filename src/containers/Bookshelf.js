@@ -2,19 +2,20 @@ import React from 'react';
 import axios from 'axios';
 
 import { Grid } from 'semantic-ui-react';
-import Article from '../components/Article';
+import Book from '../components/Book';
 import Newsletter from '../components/Newsletter';
 import SocialBar from '../components/SocialBar';
 
-class ArticleListView extends React.Component {
+class Bookshelf extends React.Component {
   state = {
     articles: null,
   };
 
   componentDidMount() {
+    console.log('loaded ');
     const getData = async () => {
       try {
-        return await axios.get('https://lukezsmith.herokuapp.com/api-site/blogposts/blogposts/');
+        return await axios.get('https://lukezsmith.herokuapp.com/api-site/books/books/');
       } catch (error) {
         this.setState({ articles: '404' });
       }
@@ -53,11 +54,25 @@ class ArticleListView extends React.Component {
       articles.data[0].is_visible !== false
     ) {
       posts = (
-        <ul id="articleList">
-          {articles.data.map(article => (
-            <Article data={article} />
-          ))}
-        </ul>
+        <div id="bookshelfContent" className="ui container left aligned">
+          <h1>Bookshelf</h1>
+          <p id="aboutText">
+            I enjoy keeping track of the books I've read and maybe some other people will be
+            interested to see. Hence, below is a list of all the books I've read.
+            <br />
+            <br />
+            For the sake of organisation, I've decided to highlight those I found outstanding with
+            <span className="yellow_text"> yellow</span> and above average books in{' '}
+            <span className="lightblue_text"> light blue</span>. The list is ordered
+            chronologically, with recent reads at the top:
+          </p>
+
+          <ul id="articleList">
+            {articles.data.map(article => (
+              <Book data={article} />
+            ))}
+          </ul>
+        </div>
       );
     }
     return (
@@ -73,4 +88,4 @@ class ArticleListView extends React.Component {
     );
   }
 }
-export default ArticleListView;
+export default Bookshelf;

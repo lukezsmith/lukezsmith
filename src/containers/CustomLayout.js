@@ -11,7 +11,11 @@ class CustomLayout extends React.Component {
     const { children } = this.props;
 
     const homeEval = () => {
-      if (!window.location.href.includes('/about') && !window.location.href.includes('/projects')) {
+      if (
+        !window.location.href.includes('/about') &&
+        !window.location.href.includes('/projects') &&
+        !window.location.href.includes('/bookshelf')
+      ) {
         return true;
       }
       return false;
@@ -76,6 +80,19 @@ class CustomLayout extends React.Component {
                         to="/about"
                       >
                         About
+                      </NavLink>
+                    </List.Header>
+                  </List.Content>
+                </List.Item>
+                <List.Item>
+                  <List.Content>
+                    <List.Header>
+                      <NavLink
+                        className="underlineLinkText"
+                        activeClassName="activeLink"
+                        to="/bookshelf"
+                      >
+                        Bookshelf
                       </NavLink>
                     </List.Header>
                   </List.Content>
