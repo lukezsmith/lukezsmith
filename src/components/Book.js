@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 
 function NormalBook(props) {
   const { bookTitle } = props;
-  return <div id="book_title_div">{bookTitle}</div>;
-}
-
-function GreatBook(props) {
-  const { bookTitle } = props;
   return (
     <div id="book_title_div" className="lightblue_text">
       {bookTitle}
     </div>
   );
+}
+
+function GreatBook(props) {
+  const { bookTitle } = props;
+  return <div id="book_title_div">{bookTitle}</div>;
 }
 
 function BestBook(props) {
@@ -32,7 +32,7 @@ function BookTitle(props) {
     case 'normal':
       return (
         <p>
-          <a className="book_a_tag" href={bookUrl}>
+          <a className="book_a_tag  lightblue_text" href={bookUrl}>
             <NormalBook bookTitle={bookTitle} />
           </a>
         </p>
@@ -40,7 +40,7 @@ function BookTitle(props) {
     case 'great':
       return (
         <p>
-          <a className="book_a_tag lightblue_text" href={bookUrl}>
+          <a className="book_a_tag" href={bookUrl}>
             <GreatBook bookTitle={bookTitle} />
           </a>
         </p>

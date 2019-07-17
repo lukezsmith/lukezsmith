@@ -5,4 +5,4 @@ from .serializers import BookSerializer
 
 class BooksViewSet(viewsets.ModelViewSet):
     serializer_class = BookSerializer
-    queryset = Book.objects.all().order_by('-date_added')
+    queryset = Book.objects.all().order_by('-id')
