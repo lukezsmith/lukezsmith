@@ -22,7 +22,6 @@ class SocialBar extends React.Component {
     Events.scrollEvent.remove('end');
   }
 
-  // eslint-disable-next-line class-methods-use-this
   scrollToTop() {
     scroll.scrollToTop();
   }
