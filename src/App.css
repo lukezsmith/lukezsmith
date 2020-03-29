@@ -10,14 +10,16 @@ body {
 	background: white;
 	color: black;
 	overflow-x: hidden;
+	max-width: 100%;
 }
 
 /* Small mobile sizes*/
 
 @media (max-width: 375px) {
 	body {
-		max-width: 340px;
+		max-width: 100%;
 		padding-left: 5.5%;
+		overflow-x: hidden;
 	}
 	#article-list-main-grid {
 		margin-left: -5.5%;
@@ -76,7 +78,9 @@ body {
 	}
 
 	body {
-		max-width: 380px;
+		/* max-width: 380px; */
+		max-width: 100%;
+		overflow-x: hidden;
 		padding-left: 10%;
 	}
 
