@@ -104,7 +104,7 @@ class ArticleDetailView extends React.Component {
 								className='underline-header-text'
 								href='https://twitter.com/lukezsmith'
 							>
-								Twitter
+								twitter
 							</a>
 							.
 							<br />
@@ -112,6 +112,7 @@ class ArticleDetailView extends React.Component {
 							If you liked this post, please be sure to subscribe to my
 							newsletter at the bottom of the page. Thanks!
 						</p>
+						<h2 />
 					</div>
 					<Divider id='twitter-prompt-div' />
 					<div id='social-embed'>
