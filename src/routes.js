@@ -9,10 +9,10 @@ import Bookshelf from './containers/Bookshelf';
 const BaseRouter = () => (
 	<div>
 		<Switch>
-			<Route exact path='/' component={AboutView}>
+			<Route exact path='/' component={ArticleListView}>
 				{' '}
 			</Route>
-			<Route path='/about/' component={ArticleListView}>
+			<Route path='/about/' component={AboutView}>
 				{' '}
 			</Route>
 			<Route path='/projects/' component={ProjectView}>
