@@ -35,19 +35,24 @@ class ArticleListView extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log('mounting');
 		this.evalData();
+		this.render();
 	}
 
 	render() {
+		console.log('rendering');
 		const { articles } = this.state;
 
 		let posts = <h1>Oops! No posts yet, please check again later.</h1>;
 		if (articles === null) {
+			console.log('NULL');
 			return null;
 		} else {
 			const filteredArticles = articles.data.filter(
 				article => article.is_visible === true
 			);
+			console.log(filteredArticles);
 			if (
 				articles.data !== undefined &&
 				articles.data !== '404' &&
