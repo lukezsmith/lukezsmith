@@ -23,69 +23,30 @@ class ArticleListView extends React.Component {
 			console.log(`error: ${error.message}`);
 			this.setState({ articles: '404' });
 		}
-		return 0;
 	}
-	// async evalData() {
-	// 	const data = await this.getData();
-	// 	Promise.all(data);
-	// 	console.log(`data: ${data}`);
-
-	// 	if (data !== undefined) {
-	// 		// this.setState({
-	// 		// 	articles: data
-	// 		// }
-	// 		// );
-	// 		return data;
-	// 	} else {
-	// 		// this.setState({ articles: '404' });
-
-	// 		return '404';
-	// 	}
-	// }
 
 	async componentDidMount() {
-		// console.log('mounting');
 		await this.getData();
 		this.setState({ dataLoaded: true });
-		// Promise.all(([data]),then((res) => {
-		// 	this.setState({ dataLoaded: true });
-		// 	if (res !== undefined){
-		// 		this.setState({ articles: data });
-
-		// 	}else{
-		// 		this.setState({ articles: '404' });
-
-		// 	}
-
-		// );
-
-		// if (data !== undefined) {
-		// 	this.setState({ articles: data });
-		// } else {
-		// 	this.setState({ articles: '404' });
-		// }
+		this.render();
 	}
 
 	render() {
-		// console.log('rendering');
 		const { dataLoaded, articles } = this.state;
-		// console.log(dataLoaded);
 
 		let posts = <h1>Oops! No posts yet, please check again later.</h1>;
-		if (articles === null || dataLoaded == false) {
-			// console.log('NULL');
+		if (dataLoaded == false) {
 			return null;
 		} else {
-			// console.log(articles);
 			const filteredArticles = articles.data.filter(
 				article => article.is_visible === true
 			);
-			// console.log(filteredArticles);
 			if (
 				articles.data !== undefined &&
 				articles.data !== '404' &&
 				filteredArticles.length !== 0
 			) {
+				console.log('true');
 				posts = (
 					<ul id='article-list'>
 						{filteredArticles.map(article => (
@@ -93,6 +54,8 @@ class ArticleListView extends React.Component {
 						))}
 					</ul>
 				);
+			} else {
+				console.log('False');
 			}
 		}
 		return (
