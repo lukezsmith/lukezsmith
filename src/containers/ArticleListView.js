@@ -45,7 +45,6 @@ class ArticleListView extends React.Component {
 				articles.data !== '404' &&
 				filteredArticles.length !== 0
 			) {
-				console.log('true');
 				posts = (
 					<ul id='article-list'>
 						{filteredArticles.map(article => (
@@ -53,8 +52,6 @@ class ArticleListView extends React.Component {
 						))}
 					</ul>
 				);
-			} else {
-				console.log('False');
 			}
 		}
 		return (
