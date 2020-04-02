@@ -7,24 +7,24 @@ import ProjectView from './containers/ProjectView';
 import Bookshelf from './containers/Bookshelf';
 
 const BaseRouter = () => (
-  <div>
-    <Switch>
-      <Route exact path="/" component={ArticleListView}>
-        {' '}
-      </Route>
-      <Route path="/about/" component={AboutView}>
-        {' '}
-      </Route>
-      <Route path="/projects/" component={ProjectView}>
-        {' '}
-      </Route>
-      <Route path="/bookshelf/" component={Bookshelf}>
-        {' '}
-      </Route>
-      <Route path="/:articleSlug/" component={ArticleDetailView}>
-        {' '}
-      </Route>
-    </Switch>
-  </div>
+	<div>
+		<Switch>
+			<Route exact path='/' component={AboutView}>
+				{' '}
+			</Route>
+			<Route path='/about/' component={ArticleListView}>
+				{' '}
+			</Route>
+			<Route path='/projects/' component={ProjectView}>
+				{' '}
+			</Route>
+			<Route path='/bookshelf/' component={Bookshelf}>
+				{' '}
+			</Route>
+			<Route path='/:articleSlug/' component={ArticleDetailView}>
+				{' '}
+			</Route>
+		</Switch>
+	</div>
 );
 export default BaseRouter;

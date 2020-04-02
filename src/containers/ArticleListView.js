@@ -28,7 +28,6 @@ class ArticleListView extends React.Component {
 	async componentDidMount() {
 		await this.getData();
 		this.setState({ dataLoaded: true });
-		this.render();
 	}
 
 	render() {
