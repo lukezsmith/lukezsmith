@@ -34,12 +34,37 @@ function ProjectView() {
 				</a>
 				.
 				<br />
-				<br />
 				{/* Some of my favourite projects that I have worked on recently include the
 				following: */}
-				I'll add some of my recent projects to this page soon.
-				<br />
-				<br />
+				<h3>Some of my recent projects:</h3>
+				<ul>
+					<li>
+						<a href='https://d3homicides.herokuapp.com/'>
+							Data visualisation of London homicide rates using D3.js
+						</a>
+
+						<Image
+							className='project-img'
+							src={
+								'https://lukezsmithcom.s3.eu-west-2.amazonaws.com/projects/d3map.png'
+							}
+							size='large'
+						/>
+					</li>
+					<li>
+						<a href='https://github.com/lukezsmith/JourneyPlanner'>
+							London journey planner Android application using TFL API
+						</a>
+
+						<Image
+							className='project-img'
+							src={
+								'https://lukezsmithcom.s3.eu-west-2.amazonaws.com/projects/journeyplanner.png'
+							}
+							size='large'
+						/>
+					</li>
+				</ul>
 			</p>
 			{/* <Segment raised className='projectSegments'>
 				<Image

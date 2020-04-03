@@ -183,7 +183,7 @@ a {
 }
 
 a:hover {
-	border-bottom: 3px solid #fee18b;
+	border-bottom: 3px solid #b5d0f7;
 	color: black;
 }
 
@@ -479,4 +479,15 @@ div.article-content > div > img {
 #book_title_div {
 	margin-top: 2% !important;
 	margin-bottom: 3% !important;
+}
+ul {
+	padding-left: 5%;
+}
+
+li {
+	padding-bottom: 5%;
+}
+
+.project-img {
+	padding-top: 5%;
 }
