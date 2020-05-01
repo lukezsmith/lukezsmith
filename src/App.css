@@ -217,6 +217,7 @@ i {
 #lead-text {
 	font-size: 1.1rem;
 	font-weight: 450;
+	line-height: 1.8;
 	margin-top: -1%;
 }
 
@@ -253,6 +254,7 @@ ul {
 .content-content {
 	font-weight: 450;
 	font-size: 1.1rem;
+	line-height: 1.8;
 }
 
 #article-list-grid {
