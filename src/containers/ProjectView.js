@@ -1,20 +1,9 @@
 import React from 'react';
 
-import { Grid, Image, Embed, Segment } from 'semantic-ui-react';
+import { Image } from 'semantic-ui-react';
 
 import Newsletter from '../components/Newsletter';
 import SocialBar from '../components/SocialBar';
-
-import journeyPlannerLogo from '../images/journey-planner-logo.png';
-import journeyPlannerView1 from '../images/journey-planner-view.png';
-import journeyPlannerView2 from '../images/journey-planner-view-2.png';
-import journeyPlannerView3 from '../images/journey-planner-view-1.png';
-
-import cryptoXLogo from '../images/cryptox-logo.png';
-import cryptoXView1 from '../images/cryptox-view.png';
-import cryptoXView2 from '../images/cryptox-view-1.png';
-
-import shubotThumbnail from '../images/yt-thumbnail.jpg';
 
 function ProjectView() {
 	window.scrollTo(0, 0);

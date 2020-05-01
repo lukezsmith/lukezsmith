@@ -86,24 +86,24 @@ class Book extends React.Component {
 	}
 }
 Book.propTypes = {
-	data: PropTypes.objectOf.isRequired
+	data: PropTypes.objectOf.isRequired,
 };
 
 NormalBook.propTypes = {
-	bookTitle: PropTypes.string.isRequired
+	bookTitle: PropTypes.string.isRequired,
 };
 
 GreatBook.propTypes = {
-	bookTitle: PropTypes.string.isRequired
+	bookTitle: PropTypes.string.isRequired,
 };
 
 BestBook.propTypes = {
-	bookTitle: PropTypes.string.isRequired
+	bookTitle: PropTypes.string.isRequired,
 };
 
 BookTitle.propTypes = {
 	bookTitle: PropTypes.string.isRequired,
 	bookType: PropTypes.string.isRequired,
-	bookUrl: PropTypes.string.isRequired
+	bookUrl: PropTypes.string.isRequired,
 };
 export default Book;

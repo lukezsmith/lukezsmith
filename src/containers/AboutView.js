@@ -4,7 +4,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Image } from 'semantic-ui-react';
 
-import me from '../images/lukezsmith.jpg';
+import me from '../images/lukezsmith-square.jpg';
 import Newsletter from '../components/Newsletter';
 import SocialBar from '../components/SocialBar';
 

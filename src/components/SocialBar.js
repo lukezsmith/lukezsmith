@@ -12,9 +12,9 @@ class SocialBar extends React.Component {
 	}
 
 	componentDidMount() {
-		Events.scrollEvent.register('begin', () => {});
+		Events.scrollEvent.register('begin', function() {});
 
-		Events.scrollEvent.register('end', () => {});
+		Events.scrollEvent.register('end', function() {});
 	}
 
 	componentWillUnmount() {
@@ -31,19 +31,25 @@ class SocialBar extends React.Component {
 			<Grid id='social-grid' columns={2}>
 				<Grid.Column id='social-list' width={10}>
 					<a className='a-blocker' href='https://twitter.com/lukezsmith'>
-						<Icon name='twitter' size='big' />
-					</a>
-					<a className='a-blocker' href='https://www.facebook.com/lukezs'>
-						<Icon name='facebook' size='big' />
+						<Icon className='blue-icon' name='twitter' size='big' />
 					</a>
 					<a className='a-blocker' href='https://github.com/lukezsmith'>
-						<Icon name='github' size='big' />
+						<Icon className='blue-icon' name='github' size='big' />
 					</a>
 					<a
 						className='a-blocker'
 						href='https://www.linkedin.com/in/luke-smith-a47931168/'
 					>
-						<Icon name='linkedin' size='big' />
+						<Icon className='blue-icon' name='linkedin' size='big' />
+					</a>
+					<a
+						className='a-blocker'
+						href='https://www.instagram.com/lukezachsmith/'
+					>
+						<Icon className='blue-icon' name='instagram' size='big' />
+					</a>
+					<a className='a-blocker' href='https://www.facebook.com/lukezs'>
+						<Icon className='blue-icon' name='facebook' size='big' />
 					</a>
 				</Grid.Column>
 				<Grid.Column id='toTopCol' width={6}>

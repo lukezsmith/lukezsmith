@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "2db78b13cc3877912749",
-    "url": "/static/css/main.fa5839a8.chunk.css"
+    "revision": "96d64fee2a0eaadfa4c9",
+    "url": "/static/css/main.fd4c00e1.chunk.css"
   },
   {
-    "revision": "2db78b13cc3877912749",
-    "url": "/static/js/main.2db78b13.chunk.js"
+    "revision": "96d64fee2a0eaadfa4c9",
+    "url": "/static/js/main.96d64fee.chunk.js"
   },
   {
-    "revision": "449ea1211c7700b8ceaf",
-    "url": "/static/css/1.3983c251.chunk.css"
+    "revision": "d0d20ed9d08e48b917e1",
+    "url": "/static/css/1.a23c1b48.chunk.css"
   },
   {
-    "revision": "449ea1211c7700b8ceaf",
-    "url": "/static/js/1.449ea121.chunk.js"
+    "revision": "d0d20ed9d08e48b917e1",
+    "url": "/static/js/1.d0d20ed9.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -44,40 +44,8 @@ self.__precacheManifest = [
     "url": "/static/media/linkedin.aa80ba20.svg"
   },
   {
-    "revision": "89b28e854c51da9e76f4d4d86ce69c55",
-    "url": "/static/media/lukezsmith.89b28e85.jpg"
-  },
-  {
-    "revision": "79db09147691c4dd648d2bb2b9bba718",
-    "url": "/static/media/journey-planner-logo.79db0914.png"
-  },
-  {
-    "revision": "505282cf430ba1debb557574129fb220",
-    "url": "/static/media/journey-planner-view.505282cf.png"
-  },
-  {
-    "revision": "f85fc33a9e876a2c9d03086af1c5cfd6",
-    "url": "/static/media/journey-planner-view-2.f85fc33a.png"
-  },
-  {
-    "revision": "c0f7bee31921b937c3a26aa7379fe02b",
-    "url": "/static/media/journey-planner-view-1.c0f7bee3.png"
-  },
-  {
-    "revision": "0c68f232e2e2d4ed55731027f4fab8a0",
-    "url": "/static/media/cryptox-logo.0c68f232.png"
-  },
-  {
-    "revision": "9d08d693133899cd50a9f0ef612d3a79",
-    "url": "/static/media/cryptox-view.9d08d693.png"
-  },
-  {
-    "revision": "7481f1ab5cca6b24f33d3032a7c7d779",
-    "url": "/static/media/cryptox-view-1.7481f1ab.png"
-  },
-  {
-    "revision": "b369c1159a6875039185d4da677a371c",
-    "url": "/static/media/yt-thumbnail.b369c115.jpg"
+    "revision": "baa951d09bc9e295248a8f02b24b1b56",
+    "url": "/static/media/lukezsmith-square.baa951d0.jpg"
   },
   {
     "revision": "cd6c777f1945164224dee082abaea03a",
@@ -116,20 +84,20 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a046592b.woff"
   },
   {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/static/media/icons.b87b9ba5.ttf"
+    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
+    "url": "/static/media/icons.8e3c7f55.eot"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
     "url": "/static/media/brand-icons.13db00b7.eot"
   },
   {
-    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
-    "url": "/static/media/brand-icons.c5ebe0b3.ttf"
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/static/media/icons.b87b9ba5.ttf"
   },
   {
-    "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
-    "url": "/static/media/icons.8e3c7f55.eot"
+    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
+    "url": "/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
     "revision": "82f60bd0b94a1ed68b1e6e309ce2e8c3",
@@ -144,7 +112,7 @@ self.__precacheManifest = [
     "url": "/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "083a8f1737bd16872e74e62a6cc34d18",
+    "revision": "60a637ee9c66a482d62b348905eaed37",
     "url": "/index.html"
   }
 ];

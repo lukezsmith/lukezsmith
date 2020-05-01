@@ -9,7 +9,7 @@ body {
 		'arial', sans-serif;
 	background: white;
 	color: black;
-	overflow-x: hidden;
+	/* overflow-x: hiden; */
 	max-width: 100%;
 }
 
@@ -19,7 +19,7 @@ body {
 	body {
 		max-width: 100%;
 		padding-left: 5.5%;
-		overflow-x: hidden;
+		/* overflow-x: hidden; */
 	}
 	#article-list-main-grid {
 		margin-left: -5.5%;
@@ -80,7 +80,7 @@ body {
 	body {
 		/* max-width: 380px; */
 		max-width: 100%;
-		overflow-x: hidden;
+		/* overflow-x: hidden; */
 		padding-left: 10%;
 	}
 
@@ -188,9 +188,13 @@ a:hover {
 }
 
 i {
+	/* color: black; */
+}
+
+.blue-icon {
 	color: #385e94;
 }
-i:hover {
+.blue-icon:hover {
 	color: #b5d0f7;
 }
 
@@ -211,7 +215,8 @@ i:hover {
 }
 
 #lead-text {
-	font-size: medium;
+	font-size: 1.1rem;
+	font-weight: 450;
 	margin-top: -1%;
 }
 
@@ -245,6 +250,10 @@ ul {
 	font-weight: bold;
 	font-size: medium;
 }
+.content-content {
+	font-weight: 450;
+	font-size: 1.1rem;
+}
 
 #article-list-grid {
 	padding-top: 3%;
@@ -258,15 +267,15 @@ ul {
 /* Force scrollbar on root page on devices larger than tablets */
 @media only screen and (min-width: 768px) {
 	.main-section {
-		overflow-x: hidden;
-		overflow-y: scroll;
+		/* overflow-x: hidden; */
+		/* overflow-y: scroll; */
 	}
 }
 
 @media only screen and (min-width: 768px) {
 	#center-col {
 		padding-left: 10%;
-		padding-right: 10%;
+		/* padding-right: 10%; */
 	}
 }
 
@@ -481,7 +490,7 @@ div.article-content > div > img {
 	margin-bottom: 3% !important;
 }
 ul {
-	padding-left: 5%;
+	padding-left: 2%;
 }
 
 li {

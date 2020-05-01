@@ -39,7 +39,7 @@ class ArticleDetailView extends React.Component {
 	state = {
 		article: null,
 		publishedDate: null,
-		htmlContent: ''
+		htmlContent: '',
 	};
 
 	componentDidMount() {
@@ -63,10 +63,10 @@ class ArticleDetailView extends React.Component {
 					'Do MMMM, YYYY'
 				);
 				this.setState({
-					publishedDate: date
+					publishedDate: date,
 				});
 				this.setState({
-					htmlContent: this.state.article.data.content
+					htmlContent: this.state.article.data.content,
 				});
 			}
 		};
@@ -93,11 +93,12 @@ class ArticleDetailView extends React.Component {
 					<h1 className='content-title'>{article.data.title}</h1>
 					<p className='content-date'>{publishedDate}</p>
 					<div className='listrow'>
-						<p>{article.data.lead}</p>
-						<div>{ReactHtmlParser(htmlContent)}</div>
+						<div className='content-content'>
+							{ReactHtmlParser(htmlContent)}
+						</div>
 						<Divider />
 						<h2>Enjoyed this post? Have anything to add?</h2>
-						<p>
+						<p className='content-content'>
 							My articles are always a work in progress, so if you have any
 							feedback or corrections, please let me know on my{' '}
 							<a
@@ -136,15 +137,15 @@ class ArticleDetailView extends React.Component {
 }
 
 WithImageArticleImage.propTypes = {
-	image: PropTypes.string.isRequired
+	image: PropTypes.string.isRequired,
 };
 
 WithoutImageArticleImage.propTypes = {
-	image: PropTypes.string.isRequired
+	image: PropTypes.string.isRequired,
 };
 
 ArticleImage.propTypes = {
-	imageUrl: PropTypes.string.isRequired
+	imageUrl: PropTypes.string.isRequired,
 };
 
 export default ArticleDetailView;
