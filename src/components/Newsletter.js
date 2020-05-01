@@ -10,16 +10,7 @@ class Newsletter extends React.Component {
 		return (
 			<Container id='newsletter-embed'>
 				<Divider />
-				<Script
-					url='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'
-					onCreate={this.handleScriptCreate}
-					onError={this.handleScriptError}
-					onLoad={this.handleScriptLoad}
-				/>
-				<script type='text/javascript'>
-					{' '}
-					{`(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);`}
-				</script>
+
 				<div>
 					<h2 id='subscribe-header'>Subscribe to my newsletter:</h2>
 				</div>
@@ -46,16 +37,15 @@ class Newsletter extends React.Component {
 					<Button id='form-btn' type='submit'>
 						Submit
 					</Button>
-					<input
+					{/* <input
 						type='hidden'
 						name='ht'
 						value='09378f98755698d2c5a6bca78d4292258754b60d:MTU0NTQyNTEwMC4wMjAx'
-					/>
+					/> */}
 					<input type='hidden' name='mc_signupsource' value='hosted' />
 				</Form>
 				<Divider id='social-divider' />
 			</Container>
-			/* </div> */
 		);
 	}
 }
