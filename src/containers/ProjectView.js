@@ -23,9 +23,11 @@ function ProjectView() {
 				</a>
 				.
 				<br />
+				<br />
+				Currently working on some exciting projects which I'll post here soon.
 				{/* Some of my favourite projects that I have worked on recently include the
 				following: */}
-				<h3>Some of my recent projects:</h3>
+				{/* <h3>Some of my recent projects:</h3>
 				<ul>
 					<li>
 						<a href='https://d3homicides.herokuapp.com/'>
@@ -53,7 +55,7 @@ function ProjectView() {
 							size='large'
 						/>
 					</li>
-				</ul>
+				</ul> */}
 			</p>
 			{/* <Segment raised className='projectSegments'>
 				<Image
