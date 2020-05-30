@@ -5,7 +5,8 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif !important;
   color: #424241;
-  font-weight: 400;
+  font-weight: 450;
+  overflow-y: scroll;
 }
 
 .btn {
@@ -75,11 +76,30 @@ li {
 
 #social-list > li {
   margin-top: 0.5%;
-  /* padding-top: 0.5%; */
 }
 
 #book-list {
-  padding-left: 1% !important;
+  padding-left: 0.5% !important;
+}
+
+#content-col {
+  min-width: 1333.15px;
+}
+
+#sidebar-col {
+  min-width: 205.1px;
+}
+
+.content-date {
+  font-weight: 500;
+  color: #999;
+}
+
+.content-content {
+  font-weight: 500;
+  line-height: 1.6em;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 /* Mobile Breakpoints */
@@ -127,7 +147,6 @@ li {
 
   #content-col {
     margin-left: 5%;
-
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Grid } from 'semantic-ui-react';
+import { Loader } from 'semantic-ui-react';
 import Book from '../components/Book';
 import Newsletter from '../components/Newsletter';
 import SocialBar from '../components/SocialBar';
@@ -37,7 +37,11 @@ class BookshelfView extends React.Component {
   render() {
     const { articles } = this.state;
     if (articles === null) {
-      return null;
+      return (
+        <div>
+          <Loader>Loading</Loader>
+        </div>
+      );
     }
 
     articles.data.forEach((item, index) => {
@@ -47,7 +51,7 @@ class BookshelfView extends React.Component {
     });
 
     let posts = (
-      <div id='bookshelf-content'>
+      <div id='project-section'>
         <h1>Bookshelf</h1>
         <p id='lead-text'>
           I love books and find it interesting to know what kinds of books
@@ -100,14 +104,7 @@ class BookshelfView extends React.Component {
         </div>
       );
     }
-    return (
-      <div>
-        <div>
-          {posts}
-          {/* <SocialBar /> */}
-        </div>
-      </div>
-    );
+    return <div>{posts}</div>;
   }
 }
 export default BookshelfView;

@@ -1,15 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Grid, Pagination } from 'semantic-ui-react';
+import { Pagination } from 'semantic-ui-react';
 import Post from '../components/Post';
-import Newsletter from '../components/Newsletter';
-import SocialBar from '../components/SocialBar';
 
 class PostListView extends React.Component {
   state = {
     dataLoaded: false,
-    articles: null
+    articles: null,
+    activePage: 1
   };
 
   async getData() {
@@ -25,13 +24,18 @@ class PostListView extends React.Component {
     }
   }
 
+  handlePageChange(activePage) {
+    this.setState({ activePage });
+  }
+
   async componentDidMount() {
     await this.getData();
     this.setState({ dataLoaded: true });
   }
 
   render() {
-    const { dataLoaded, articles } = this.state;
+    console.log('render');
+    const { dataLoaded, articles, activePage } = this.state;
 
     let posts = <h1>Oops! No posts yet, please check again later.</h1>;
 
@@ -50,19 +54,25 @@ class PostListView extends React.Component {
         numPosts = filteredArticles.length;
         posts = (
           <ul style={{ paddingLeft: '0' }}>
-            {filteredArticles.map((article) => (
-              <Post data={article} />
-            ))}
+            {filteredArticles
+              .slice((activePage - 1) * 5, activePage * 5)
+              .map((article) => (
+                <Post data={article} />
+              ))}
           </ul>
         );
+        if (Math.ceil(numPosts / 5) === 1) {
+          return <div>{posts}</div>;
+        }
       }
     }
     return (
-      <div className='articleView'>
+      <div>
         {posts}
         <Pagination
           defaultActivePage={1}
           totalPages={Math.ceil(numPosts / 5)}
+          onPageChange={(event, data) => this.handlePageChange(data.activePage)}
         />
       </div>
     );
