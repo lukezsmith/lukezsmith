@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Grid } from 'semantic-ui-react';
+import { Grid, Pagination } from 'semantic-ui-react';
 import Post from '../components/Post';
 import Newsletter from '../components/Newsletter';
 import SocialBar from '../components/SocialBar';
@@ -34,6 +34,8 @@ class PostListView extends React.Component {
     const { dataLoaded, articles } = this.state;
 
     let posts = <h1>Oops! No posts yet, please check again later.</h1>;
+
+    let numPosts = 0;
     if (dataLoaded === false) {
       return null;
     } else {
@@ -45,8 +47,9 @@ class PostListView extends React.Component {
         articles.data !== '404' &&
         filteredArticles.length !== 0
       ) {
+        numPosts = filteredArticles.length;
         posts = (
-          <ul id='article-list'>
+          <ul style={{ paddingLeft: '0' }}>
             {filteredArticles.map((article) => (
               <Post data={article} />
             ))}
@@ -54,7 +57,15 @@ class PostListView extends React.Component {
         );
       }
     }
-    return <div className='articleView'>{posts}</div>;
+    return (
+      <div className='articleView'>
+        {posts}
+        <Pagination
+          defaultActivePage={1}
+          totalPages={Math.ceil(numPosts / 5)}
+        />
+      </div>
+    );
   }
 }
 export default PostListView;
