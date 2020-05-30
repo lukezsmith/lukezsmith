@@ -2,37 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import moment from 'moment';
-import { Divider } from 'semantic-ui-react';
+import { Divider, Button, Icon } from 'semantic-ui-react';
 import ReactHtmlParser from 'react-html-parser';
+import { NavLink } from 'react-router-dom';
 
-import Newsletter from '../components/Newsletter';
-import ShareButtons from '../components/ShareButtons';
 import NotFoundView from '../components/NotFoundView';
-import SocialBar from '../components/SocialBar';
-
-function WithImageArticleImage(props) {
-  const { image } = props;
-  return <img id='withimage-article-img' src={image} alt='' />;
-}
-
-function WithoutImageArticleImage(props) {
-  const { image } = props;
-  return <img src={image} alt='' />;
-}
-
-function ArticleImage(props) {
-  const { imageUrl } = props;
-  if (imageUrl === '') {
-    return <WithoutImageArticleImage image={imageUrl} />;
-  }
-  return <WithImageArticleImage image={imageUrl} />;
-}
 
 class PostView extends React.Component {
   state = {
     article: null,
     publishedDate: null,
-    htmlContent: ''
+    htmlContent: null,
+    footer: null,
+    header: null,
+    tags: null
   };
 
   componentDidMount() {
@@ -68,7 +51,14 @@ class PostView extends React.Component {
   }
 
   render() {
-    const { article, publishedDate, htmlContent } = this.state;
+    const {
+      article,
+      publishedDate,
+      htmlContent,
+      header,
+      footer,
+      tags
+    } = this.state;
     if (article === null) {
       return null;
     }
@@ -79,79 +69,92 @@ class PostView extends React.Component {
       </div>
     );
 
+    let headerSection = null;
+    let footerSection = null;
+
+    if (header) {
+      headerSection = (
+        <div className='header-section'>
+          <div
+            style={{
+              color: 'rgb(153, 153, 153)',
+              fontStyle: 'italic',
+              marginBottom: '1%'
+            }}
+          >
+            {header}
+          </div>
+          <div
+            style={{
+              color: 'rgb(153, 153, 153)',
+              textAlign: 'center',
+              fontWeight: '500',
+              fontSize: '1.2em'
+            }}
+          >
+            ~ ~ ~
+          </div>
+        </div>
+      );
+    }
+
+    if (footer) {
+      footerSection = (
+        <div className='footer-section' style={{ marginTop: '1%' }}>
+          <div
+            style={{
+              color: 'rgb(153, 153, 153)',
+              textAlign: 'center',
+              fontWeight: '500',
+              fontSize: '1.2em'
+            }}
+          >
+            ~ ~ ~
+          </div>
+
+          <div
+            style={{
+              color: 'rgb(153, 153, 153)',
+              fontStyle: 'italic',
+              marginTop: '1%'
+            }}
+          >
+            {footer}
+          </div>
+        </div>
+      );
+    }
+
+    let tagSection = null;
+
+    if (tags) {
+      tagSection = tags.map((tag) => (
+        <span>
+          <NavLink to={`/tag/${tag}`}>#{tag}</NavLink>
+        </span>
+      ));
+    }
+
     if (article.data !== undefined) {
       articleHtml = (
         <div id='article-detail-content'>
           <h1 className='content-title'>{article.data.title}</h1>
           <p className='content-date'>{publishedDate}</p>
           <div className='listrow'>
-            <div className='header-section'>
-              <div
-                style={{
-                  color: 'rgb(153, 153, 153)',
-                  fontStyle: 'italic',
-                  marginBottom: '1%'
-                }}
-              >
-                Test TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest Test Test TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest Test
-              </div>
-              <div
-                style={{
-                  color: 'rgb(153, 153, 153)',
-                  textAlign: 'center',
-                  fontWeight: '500',
-                  fontSize: '1.2em'
-                }}
-              >
-                ~ ~ ~
-              </div>
-            </div>
+            {headerSection}
             <div className='content-content'>
               {ReactHtmlParser(htmlContent)}
             </div>
             <Divider />
-            <div className='footer-section' style={{ marginTop: '1%' }}>
-              <div
-                style={{
-                  color: 'rgb(153, 153, 153)',
-                  textAlign: 'center',
-                  fontWeight: '500',
-                  fontSize: '1.2em'
-                }}
-              >
-                ~ ~ ~
-              </div>
-              <div
-                style={{
-                  color: 'rgb(153, 153, 153)',
-                  fontStyle: 'italic',
-                  marginTop: '1%'
-                }}
-              >
-                Test TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest Test Test TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest TestTest TestTest TestTest TestTest
-                TestTest TestTest TestTest Test
-              </div>
+            {tagSection}
+            {footerSection}
+            <div style={{ marginTop: '2%', textAlign: 'center' }}>
+              <Button className='btn'>
+                <span>
+                  <Icon name='twitter'></Icon>
+                </span>
+                <span>Get in touch!</span>
+              </Button>
             </div>
           </div>
         </div>
@@ -161,17 +164,5 @@ class PostView extends React.Component {
     return <div>{articleHtml}</div>;
   }
 }
-
-WithImageArticleImage.propTypes = {
-  image: PropTypes.string.isRequired
-};
-
-WithoutImageArticleImage.propTypes = {
-  image: PropTypes.string.isRequired
-};
-
-ArticleImage.propTypes = {
-  imageUrl: PropTypes.string.isRequired
-};
 
 export default PostView;

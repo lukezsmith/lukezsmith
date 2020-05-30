@@ -19,7 +19,7 @@ class PostListView extends React.Component {
           this.setState({ articles: res });
         });
     } catch (error) {
-      console.log(`error: ${error.message}`);
+      console.error(`error: ${error.message}`);
       this.setState({ articles: '404' });
     }
   }
@@ -34,7 +34,6 @@ class PostListView extends React.Component {
   }
 
   render() {
-    console.log('render');
     const { dataLoaded, articles, activePage } = this.state;
 
     let posts = <h1>Oops! No posts yet, please check again later.</h1>;
