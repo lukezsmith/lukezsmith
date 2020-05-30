@@ -1,113 +1,133 @@
 /* Global Styles */
 
-body{
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-	color: #424241;
-	font-weight: 400;
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+  color: #424241;
+  font-weight: 400;
 }
 
-.btn{
-	background-color:#385e94 !important;
-	color: white !important;
-	font-weight: bolder !important;
+.btn {
+  background-color: #385e94 !important;
+  color: white !important;
+  font-weight: bolder !important;
 }
 
-.btn:hover{
-	background-color: #253a57 !important;
+.btn:hover {
+  background-color: #253a57 !important;
 }
 
-ul{
-	list-style: none;
-	padding-left: 3%
+ul {
+  list-style: none;
+  padding-left: 3%;
 }
 
-li{
-	margin-top: 2%
+li {
+  margin-top: 2%;
 }
 
-#navlinks{
-	font-weight: 600;
+.link-underline {
+  font-weight: bold;
+  color: #385e94;
 }
 
-#navlinks > li > a{
-	color: #385e94 
+.link-underline:hover {
+  color: #253a57;
+  border-bottom: 1px solid #253a57;
+}
+#navlinks > li > a {
+  font-weight: 600 !important;
 }
 
-#navlinks > li > a:hover{
-	color: #253a57;
-	border-bottom: 1px solid #253a57;
+#categories-header {
+  font-weight: 600;
+  font-size: 1em;
+}
+.categories > li {
+  margin-top: 10%;
+  font-size: 0.9em;
+  opacity: 0.9;
 }
 
-#categories-header{
-	font-weight: 600;
-	font-size: 1em
-}
-.categories > li{
-	margin-top: 10%;
-	font-size: 0.9em;
-	opacity: 0.9;
+.about-list {
+  list-style: disc;
 }
 
-.categories > li > b > a{
-	color: #385e94 
+#about-section > div {
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
-.categories > li > b > a:hover{
-	color: #253a57;
-	border-bottom: 1px solid #253a57;
+#project-section > div {
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
+#contact-section > div {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#social-list {
+  padding-left: 1% !important;
+}
+
+#social-list > li {
+  margin-top: 0.5%;
+  /* padding-top: 0.5%; */
+}
+
+#book-list {
+  padding-left: 1% !important;
+}
 
 /* Mobile Breakpoints */
 @media only screen and (min-width: 992px) {
-
-	#main-section{
-		margin-left: 15vw;
-		margin-right: 15vw;
-		background-color: red
-	}
+  #main-section {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    background-color: red;
+  }
 }
 
 /* Tablet Breakpoints */
 @media only screen and (min-width: 992px) {
-
-	#main-section{
-		margin-left: 15vw;
-		margin-right: 15vw;
-		background-color: red
-	}
+  #main-section {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    background-color: red;
+  }
 }
 
 /* Laptop Breakpoints */
 @media only screen and (min-width: 992px) {
-
-	#main-section{
-		margin-left: 15vw;
-		margin-right: 15vw;
-		background-color: blue
-	}
+  #main-section {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    background-color: blue;
+  }
 }
 
 /* Wide (Monitor) Breakpoints */
 @media only screen and (min-width: 1200px) {
+  body {
+    padding-top: 2%;
+  }
 
-	body{
-		padding-top:2%;
-	}
+  #main-section {
+    margin-left: 8%;
+    margin-right: 8%;
+    background-color: white;
+  }
 
-	#main-section{
-		margin-left: 8%;
-		margin-right: 8%;
-		background-color: white;
-	}
+  #sidebar-col {
+    /* margin-left: 4vw; */
+  }
 
-	#sidebar-col{
-		/* margin-left: 4vw; */
-	}
-	
-	#content-col{
-		margin-left: 5%;
-		background-color: red;
-		
-	}
+  #content-col {
+    margin-left: 5%;
+
+    border: 1px solid red;
+  }
 }
