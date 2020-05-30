@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 import BaseRouter from './routes';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
-import CustomLayout from './containers/CustomLayout';
+import BaseLayout from './containers/BaseLayout';
 
 ReactGA.initialize('UA-142802186-1');
 
@@ -21,9 +21,9 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<Router>
-					<CustomLayout>
+					<BaseLayout>
 						<BaseRouter />
-					</CustomLayout>
+					</BaseLayout>
 				</Router>
 			</div>
 		);
