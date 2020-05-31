@@ -10,34 +10,24 @@ class BaseLayout extends React.Component {
       <div id='main-section'>
         <Grid id='main-grid' stackable columns={2}>
           <Grid.Column id='sidebar-col' width={2}>
-            <NavLink className='a-blocker' to='/'>
-              <Button className='btn'>Luke Smith</Button>
+            <NavLink style={{ border: 'none' }} to='/'>
+              <Button className='btn'>lukezsmith</Button>
             </NavLink>
             <ul id='navlinks'>
               <li>
-                <NavLink className='link-underline' to='/'>
-                  Posts
-                </NavLink>
+                <NavLink to='/'>Posts</NavLink>
               </li>
               <li>
-                <NavLink className='link-underline' to='/about'>
-                  About me
-                </NavLink>
+                <NavLink to='/about'>About me</NavLink>
               </li>
               <li>
-                <NavLink className='link-underline' to='/projects'>
-                  Projects
-                </NavLink>
+                <NavLink to='/projects'>Projects</NavLink>
               </li>
               <li>
-                <NavLink className='link-underline' to='/bookshelf'>
-                  Bookshelf
-                </NavLink>
+                <NavLink to='/bookshelf'>Bookshelf</NavLink>
               </li>
               <li>
-                <NavLink className='link-underline' to='/contact'>
-                  Contact
-                </NavLink>
+                <NavLink to='/contact'>Contact</NavLink>
               </li>
             </ul>
             <p id='categories-header'>Things that can be found on this site:</p>
@@ -45,36 +35,35 @@ class BaseLayout extends React.Component {
               <li>
                 Programming-related content:{' '}
                 <b>
-                  <NavLink className='link-underline' to='/tags/programming'>
-                    #programming
-                  </NavLink>
+                  <NavLink to='/tag/programming'>#programming</NavLink>
                 </b>
               </li>
 
               <li>
                 All things books:{' '}
                 <b>
-                  <NavLink className='link-underline' to='/tags/books'>
-                    #books
-                  </NavLink>
+                  <NavLink to='/tag/books'>#books</NavLink>
                 </b>
               </li>
 
               <li>
                 Cool things I come across on the internet:{' '}
                 <b>
-                  <NavLink className='link-underline' to='/tags/internet'>
-                    #internet
-                  </NavLink>
+                  <NavLink to='/tag/internet'>#internet</NavLink>
+                </b>
+              </li>
+
+              <li>
+                Random thoughts and ideas I have:{' '}
+                <b>
+                  <NavLink to='/tag/thoughts'>#thoughts</NavLink>
                 </b>
               </li>
 
               <li>
                 For occasional updates, here's my{' '}
                 <b>
-                  <NavLink className='link-underline' to='/newsletter'>
-                    newsletter
-                  </NavLink>
+                  <a href='http://eepurl.com/gb_zzf'>newsletter</a>
                 </b>
               </li>
             </ul>

@@ -9,9 +9,7 @@ function ContactView() {
       <div>
         The best place to catch me is on Twitter at{' '}
         <b>
-          <a className='link-underline' href='https://twitter.com/lukezsmith'>
-            @lukezsmith
-          </a>
+          <a href='https://twitter.com/lukezsmith'>@lukezsmith</a>
         </b>
       </div>
       <div>
@@ -19,32 +17,17 @@ function ContactView() {
         <ul id='social-list'>
           <li>
             <b>
-              <a
-                className='link-underline'
-                href='https://twitter.com/lukezsmith'
-              >
-                Github
-              </a>
+              <a href='https://twitter.com/lukezsmith'>Github</a>
             </b>
           </li>
           <li>
             <b>
-              <a
-                className='link-underline'
-                href='https://twitter.com/lukezsmith'
-              >
-                LinkedIn
-              </a>
+              <a href='https://twitter.com/lukezsmith'>LinkedIn</a>
             </b>
           </li>
           <li>
             <b>
-              <a
-                className='link-underline'
-                href='https://twitter.com/lukezsmith'
-              >
-                Instagram
-              </a>
+              <a href='https://twitter.com/lukezsmith'>Instagram</a>
             </b>
           </li>
         </ul>

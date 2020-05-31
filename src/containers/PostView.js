@@ -20,7 +20,7 @@ class PostView extends React.Component {
       try {
         return await axios.get(
           // `https://lukezsmith.herokuapp.com/api-site/blogposts/blogposts/${articleSlug}/`
-          `http://127.0.0.1:8000/api-site/blogposts/blogposts/${articleSlug}/`
+          `http://127.0.0.1:8000/api-site/blogposts/all/${articleSlug}/`
         );
       } catch (error) {
         this.setState({ article: '404' });
@@ -42,8 +42,11 @@ class PostView extends React.Component {
 
   render() {
     const { article } = this.state;
+    console.log(article);
     if (article === null) {
       return null;
+    } else if (article === '404') {
+      return <NotFoundView />;
     }
 
     const publishedDate = moment(article.data.published_date).format(
@@ -75,7 +78,7 @@ class PostView extends React.Component {
               marginBottom: '1%'
             }}
           >
-            {header}
+            {ReactHtmlParser(header)}
           </div>
           <div
             style={{
@@ -93,7 +96,7 @@ class PostView extends React.Component {
 
     if (footer) {
       footerSection = (
-        <div className='footer-section' style={{ marginTop: '1%' }}>
+        <div className='footer-section'>
           <div
             style={{
               color: 'rgb(153, 153, 153)',
@@ -112,7 +115,7 @@ class PostView extends React.Component {
               marginTop: '1%'
             }}
           >
-            {footer}
+            {ReactHtmlParser(footer)}
           </div>
         </div>
       );
@@ -121,14 +124,10 @@ class PostView extends React.Component {
     let tagSection = null;
     if (tags) {
       tagSection = (
-        <div style={{ marginTop: '1%' }}>
+        <div className='tag-section'>
           {tags.map((tag) => (
             <span>
-              <NavLink
-                className='link-underline'
-                style={{ fontSize: '0.9em' }}
-                to={`/tag/${tag}`}
-              >
+              <NavLink style={{ fontSize: '0.9em' }} to={`/tag/${tag}`}>
                 #{tag}{' '}
               </NavLink>
             </span>
@@ -151,7 +150,7 @@ class PostView extends React.Component {
             {footerSection}
             {tagSection}
 
-            <div style={{ marginTop: '2%', textAlign: 'center' }}>
+            <div className='twitter-btn'>
               <Button onClick={this.handleTwitterBtnClick} className='btn'>
                 <span>
                   <Icon name='twitter'></Icon>

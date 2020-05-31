@@ -9,23 +9,16 @@ class Post extends React.Component {
   constructor(props) {
     super(props);
     const { data } = this.props;
-    const date = moment(props.data.published_date).format('Do MMMM, YYYY');
-    data.published_date = date;
   }
 
   render() {
     const { data } = this.props;
+
+    const date = moment(data.published_date).format('MMMM Do, YYYY');
     return (
       <div id='post-section'>
         <div>
-          {/* <NavLink className='link-underline' to={`/${data.slug}`}>
-            <h2 className='link-underline'>{data.title}</h2>
-          </NavLink> */}
-          <a
-            href={`/post/${data.slug}`}
-            className='link-underline'
-            style={{ fontSize: '1.8em' }}
-          >
+          <a className='post-header' href={`/post/${data.slug}`}>
             {data.title}
           </a>
           <p
@@ -35,7 +28,7 @@ class Post extends React.Component {
               paddingTop: '1%'
             }}
           >
-            Posted on {data.published_date}
+            Posted on {date}
           </p>
           <div> {data.lead}</div>
           <br />

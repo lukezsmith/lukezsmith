@@ -69,7 +69,7 @@ class BookshelfView extends React.Component {
           </span>
           . The list is ordered chronologically, with recent reads at the top:
         </p>
-        <p>Oops! No books have been added yet, please check again later.</p>;
+        <p>Oops! No books have been added yet, please check again later.</p>
       </div>
     );
 

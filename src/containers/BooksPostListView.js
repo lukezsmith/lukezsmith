@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Pagination } from 'semantic-ui-react';
 import Post from '../components/Post';
 
-class PostListView extends React.Component {
+class BooksPostListView extends React.Component {
   state = {
     dataLoaded: false,
     articles: null,
@@ -15,7 +15,7 @@ class PostListView extends React.Component {
     try {
       await axios
         // .get('https://lukezsmith.herokuapp.com/api-site/blogposts/blogposts/')
-        .get('http://127.0.0.1:8000/api-site/blogposts/all/')
+        .get('http://127.0.0.1:8000/api-site/blogposts/books/')
         .then((res) => {
           this.setState({ articles: res });
         });
@@ -42,7 +42,6 @@ class PostListView extends React.Component {
         <h1>Oops, no posts yet!</h1> <p>Please check again later.</p>
       </div>
     );
-
     let numPosts = 0;
     if (dataLoaded === false) {
       return null;
@@ -84,4 +83,4 @@ class PostListView extends React.Component {
     );
   }
 }
-export default PostListView;
+export default BooksPostListView;
