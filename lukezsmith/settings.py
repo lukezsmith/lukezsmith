@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
+import dj_database_url
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+2i#a_2ryra6y3_g_6hb9b(w&*xy^axcb2jsh3#b7ppbp*$2ju'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
- 
-ALLOWED_HOSTS = ['localhost', '192.168.0.121','127.0.0.1', 'lukezsmith.herokuapp.com', 'www.lukezsmith.com','lukezsmith.com']
+DEBUG = True
+
+ALLOWED_HOSTS = ['localhost', '192.168.0.121', '127.0.0.1',
+                 'lukezsmith.herokuapp.com', 'www.lukezsmith.com', 'lukezsmith.com']
 
 
 # Application definition
@@ -36,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -96,7 +98,6 @@ DATABASES = {
     }
 }
 
-import dj_database_url
 
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
@@ -160,7 +161,7 @@ ACCOUNT_EMAIL_REQUIRED = False
 
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
 
-#Security settings
+# Security settings
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
@@ -168,4 +169,3 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
-
