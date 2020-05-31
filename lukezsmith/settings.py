@@ -180,8 +180,18 @@ SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
 
-# SECURE_CONTENT_TYPE_NOSNIFF = False
-# SECURE_BROWSER_XSS_FILTER = False
-# SECURE_SSL_REDIRECT = False
-# CSRF_COOKIE_SECURE = False
-# X_FRAME_OPTIONS = 'ALLOW'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
