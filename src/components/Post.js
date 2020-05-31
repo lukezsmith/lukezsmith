@@ -22,7 +22,7 @@ class Post extends React.Component {
             <h2 className='link-underline'>{data.title}</h2>
           </NavLink> */}
           <a
-            href={`/${data.slug}`}
+            href={`/post/${data.slug}`}
             className='link-underline'
             style={{ fontSize: '1.8em' }}
           >

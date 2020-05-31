@@ -7,4 +7,4 @@ class BlogpostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blogpost
         fields = ('id', 'title', 'slug', 'lead', 'content',
-                  'published_date', 'edited_date', 'image', 'is_visible')
+                  'published_date', 'edited_date', 'header', 'footer', 'tags', 'is_visible')

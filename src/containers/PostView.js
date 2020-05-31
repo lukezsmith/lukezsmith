@@ -10,12 +10,7 @@ import NotFoundView from '../components/NotFoundView';
 
 class PostView extends React.Component {
   state = {
-    article: null,
-    publishedDate: null,
-    htmlContent: null,
-    footer: null,
-    header: null,
-    tags: null
+    article: null
   };
 
   componentDidMount() {
@@ -24,7 +19,8 @@ class PostView extends React.Component {
     const getData = async () => {
       try {
         return await axios.get(
-          `https://lukezsmith.herokuapp.com/api-site/blogposts/blogposts/${articleSlug}/`
+          // `https://lukezsmith.herokuapp.com/api-site/blogposts/blogposts/${articleSlug}/`
+          `http://127.0.0.1:8000/api-site/blogposts/blogposts/${articleSlug}/`
         );
       } catch (error) {
         this.setState({ article: '404' });
@@ -34,34 +30,31 @@ class PostView extends React.Component {
       const data = await getData();
       if (data !== undefined) {
         this.setState({ article: data });
-
-        const date = moment(this.state.article.data.published_date).format(
-          'MMMM Do, YYYY'
-        );
-        this.setState({
-          publishedDate: date
-        });
-        this.setState({
-          htmlContent: this.state.article.data.content
-        });
       }
     };
 
     evalData();
   }
 
+  handleTwitterBtnClick() {
+    window.open('https://twitter.com/lukezsmith');
+  }
+
   render() {
-    const {
-      article,
-      publishedDate,
-      htmlContent,
-      header,
-      footer,
-      tags
-    } = this.state;
+    const { article } = this.state;
     if (article === null) {
       return null;
     }
+
+    const publishedDate = moment(article.data.published_date).format(
+      'MMMM Do, YYYY'
+    );
+
+    const htmlContent = article.data.content;
+    const title = article.data.title;
+    const header = article.data.header;
+    const footer = article.data.footer;
+    const tags = article.data.tags;
 
     let articleHtml = (
       <div>
@@ -126,13 +119,22 @@ class PostView extends React.Component {
     }
 
     let tagSection = null;
-
     if (tags) {
-      tagSection = tags.map((tag) => (
-        <span>
-          <NavLink to={`/tag/${tag}`}>#{tag}</NavLink>
-        </span>
-      ));
+      tagSection = (
+        <div style={{ marginTop: '1%' }}>
+          {tags.map((tag) => (
+            <span>
+              <NavLink
+                className='link-underline'
+                style={{ fontSize: '0.9em' }}
+                to={`/tag/${tag}`}
+              >
+                #{tag}{' '}
+              </NavLink>
+            </span>
+          ))}
+        </div>
+      );
     }
 
     if (article.data !== undefined) {
@@ -146,10 +148,11 @@ class PostView extends React.Component {
               {ReactHtmlParser(htmlContent)}
             </div>
             <Divider />
-            {tagSection}
             {footerSection}
+            {tagSection}
+
             <div style={{ marginTop: '2%', textAlign: 'center' }}>
-              <Button className='btn'>
+              <Button onClick={this.handleTwitterBtnClick} className='btn'>
                 <span>
                   <Icon name='twitter'></Icon>
                 </span>

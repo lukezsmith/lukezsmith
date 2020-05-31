@@ -13,11 +13,10 @@ class Blogpost(models.Model):
     content = models.TextField()
     published_date = models.DateField(default=timezone.now)
     edited_date = models.DateTimeField(auto_now=True)
-    header = models.TextField(max_length=1000, default='')
-    header = models.TextField(max_length=1000, default='')
+    header = models.TextField(max_length=1000, blank=True)
+    footer = models.TextField(max_length=1000, blank=True)
     tags = ArrayField(
-        models.CharField(max_length=50, blank=True)
-    ),
+        models.CharField(max_length=50, blank=True), blank=True)
     is_visible = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):

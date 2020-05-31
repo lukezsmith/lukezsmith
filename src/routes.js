@@ -25,7 +25,7 @@ const BaseRouter = () => (
       <Route path='/contact/' component={ContactView}>
         {' '}
       </Route>
-      <Route path='/:articleSlug/' component={PostView}>
+      <Route path='/post/:articleSlug/' component={PostView}>
         {' '}
       </Route>
     </Switch>

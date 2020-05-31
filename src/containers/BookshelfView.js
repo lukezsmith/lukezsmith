@@ -15,7 +15,8 @@ class BookshelfView extends React.Component {
     const getData = async () => {
       try {
         return await axios.get(
-          'https://lukezsmith.herokuapp.com/api-site/books/books/'
+          // 'https://lukezsmith.herokuapp.com/api-site/books/books/'
+          'http://127.0.0.1:8000/api-site/books/books/'
         );
       } catch (error) {
         this.setState({ articles: '404' });

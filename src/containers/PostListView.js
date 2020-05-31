@@ -14,7 +14,8 @@ class PostListView extends React.Component {
   async getData() {
     try {
       await axios
-        .get('https://lukezsmith.herokuapp.com/api-site/blogposts/blogposts/')
+        // .get('https://lukezsmith.herokuapp.com/api-site/blogposts/blogposts/')
+        .get('http://127.0.0.1:8000/api-site/blogposts/blogposts/')
         .then((res) => {
           this.setState({ articles: res });
         });
