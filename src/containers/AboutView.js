@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function AboutView() {
   return (
@@ -16,29 +17,52 @@ function AboutView() {
       <div>
         Currently, I'm a Computer Science student at the University of Durham,
         where I'm mainly focused on Machine Learning. Aside from my studies, I
-        tend to build side projects which can be found in /projects/.
+        tend to build side projects which can be found at{' '}
+        <NavLink to='/projects'>/projects.</NavLink>
       </div>
       <div>
         When I'm not studying or building things I'm usually trying to find
-        interesting things to think about. I usually find such things in books.
-        I'm going to try to publish the weird thoughts I have on this blog.
+        interesting things to think about. <br />I usually find such things in
+        books, and I'll use this site to post about the interesting things I
+        read about.
       </div>
 
-      <div>I'll update this page sporadically, so parts may be outdated.</div>
+      <div>
+        With the internet making information so accessible to a lot of people,
+        my view is that innovation favours originality. <br /> One of the best
+        ways of cultivating originality is reading interesting things that other
+        people aren't. <br />
+        This is a goal of mine and I'll try to publish some of the weird
+        thoughts and things I come across on this blog.
+      </div>
 
       <div>
-        <h3>Some of my opinions</h3>
+        I'll update this page sporadically, so at any time parts may be
+        outdated.
+      </div>
+
+      <div>
+        <h3>Opinions</h3>
         <ul className='about-list'>
-          <li>Deep Learning</li>
-          <li>Blockchain</li>
+          <i>
+            &lt;I'll update this part very shortly, I need some time to think
+            about this&gt;
+          </i>
         </ul>
       </div>
 
       <div>
         <h3>Interests</h3>
         <ul className='about-list'>
-          <li>Deep Learning applications </li>
-          <li>Blockchain</li>
+          <li>Applications of Deep Learning</li>
+          <li>Community/Institution Systems for fostering innovation </li>
+          <li>The future of books (reading technology)</li>
+          <li>The future of information in general</li>
+          <li>Information validation</li>
+          <li>Applications of Blockchain (or is it another trend)</li>
+          <li>Space</li>
+          <li>The future</li>
+          <li>Books</li>
         </ul>
       </div>
 

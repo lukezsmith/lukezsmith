@@ -3,8 +3,6 @@ import axios from 'axios';
 
 import { Loader } from 'semantic-ui-react';
 import Book from '../components/Book';
-import Newsletter from '../components/Newsletter';
-import SocialBar from '../components/SocialBar';
 
 class BookshelfView extends React.Component {
   state = {
@@ -15,8 +13,8 @@ class BookshelfView extends React.Component {
     const getData = async () => {
       try {
         return await axios.get(
-          // 'https://lukezsmith.herokuapp.com/api-site/books/books/'
-          'http://127.0.0.1:8000/api-site/books/books/'
+          'https://lukezsmith.herokuapp.com/api-site/books/books/'
+          // 'http://127.0.0.1:8000/api-site/books/books/'
         );
       } catch (error) {
         this.setState({ articles: '404' });
@@ -51,35 +49,14 @@ class BookshelfView extends React.Component {
       }
     });
 
-    let posts = (
-      <div id='project-section'>
-        <h1>Bookshelf</h1>
-        <p id='lead-text'>
-          I love books and find it interesting to know what kinds of books
-          people are reading, so I thought i'd publish my own list.
-          <br />
-          <br />
-          For the sake of organisation, I've decided to highlight those I found
-          outstanding with
-          <span style={{ color: 'green' }}> green</span> and above average books
-          in{' '}
-          <span className='lightblue_text' style={{ fontWeight: 'bold' }}>
-            {' '}
-            blue
-          </span>
-          . The list is ordered chronologically, with recent reads at the top:
-        </p>
-        <p>Oops! No books have been added yet, please check again later.</p>
-      </div>
-    );
-
+    let bookHtml = {};
     if (
       articles.data !== undefined &&
       articles.data !== '404' &&
       articles.data.length !== 0 &&
       articles.data[0].is_visible !== false
     ) {
-      posts = (
+      bookHtml = (
         <div id='bookshelf-content'>
           <h1>Bookshelf</h1>
           <p id='lead-text'>
@@ -104,8 +81,29 @@ class BookshelfView extends React.Component {
           </ul>
         </div>
       );
+    } else {
+      bookHtml = (
+        <div id='project-section'>
+          <h1>Bookshelf</h1>
+          <p id='lead-text'>
+            I love books and find it interesting to know what kinds of books
+            people are reading, so I thought i'd publish my own list.
+            <br />
+            <br />
+            For the sake of organisation, I've decided to highlight those I
+            found above average in
+            <span style={{ fontWeight: 'bold' }}> bold</span> and outstanding
+            books in{' '}
+            <span style={{ color: '#385e94', fontWeight: 'bold' }}> blue</span>.
+            <br />
+            <br />
+            The list is ordered chronologically, with recent reads at the top.
+          </p>
+          <p>Oops! No books have been added yet, please check again later.</p>
+        </div>
+      );
     }
-    return <div>{posts}</div>;
+    return <div>{bookHtml}</div>;
   }
 }
 export default BookshelfView;

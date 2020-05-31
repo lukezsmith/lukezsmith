@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { Grid, List, Button } from 'semantic-ui-react';
+import { Grid, Button } from 'semantic-ui-react';
 
 class BaseLayout extends React.Component {
   render() {

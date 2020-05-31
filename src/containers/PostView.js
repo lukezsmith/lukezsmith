@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 import moment from 'moment';
 import { Divider, Button, Icon } from 'semantic-ui-react';
@@ -19,8 +18,8 @@ class PostView extends React.Component {
     const getData = async () => {
       try {
         return await axios.get(
-          // `https://lukezsmith.herokuapp.com/api-site/blogposts/blogposts/${articleSlug}/`
-          `http://127.0.0.1:8000/api-site/blogposts/all/${articleSlug}/`
+          `https://lukezsmith.herokuapp.com/api-site/blogposts/all/${articleSlug}/`
+          // `http://127.0.0.1:8000/api-site/blogposts/all/${articleSlug}/`
         );
       } catch (error) {
         this.setState({ article: '404' });
@@ -139,7 +138,7 @@ class PostView extends React.Component {
     if (article.data !== undefined) {
       articleHtml = (
         <div id='article-detail-content'>
-          <h1 className='content-title'>{article.data.title}</h1>
+          <h1 className='content-title'>{title}</h1>
           <p className='content-date'>{publishedDate}</p>
           <div className='listrow'>
             {headerSection}

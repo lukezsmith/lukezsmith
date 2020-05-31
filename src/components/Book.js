@@ -57,11 +57,6 @@ function BookTitle(props) {
 }
 
 class Book extends React.Component {
-  constructor(props) {
-    super(props);
-    const { data } = this.props;
-  }
-
   render() {
     const { data } = this.props;
     return (

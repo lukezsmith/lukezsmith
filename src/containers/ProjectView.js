@@ -1,10 +1,5 @@
 import React from 'react';
 
-import { Image } from 'semantic-ui-react';
-
-import Newsletter from '../components/Newsletter';
-import SocialBar from '../components/SocialBar';
-
 function ProjectView() {
   return (
     <div id='project-section'>

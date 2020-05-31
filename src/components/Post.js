@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 
 import moment from 'moment';
 import { Divider } from 'semantic-ui-react';
 
 class Post extends React.Component {
-  constructor(props) {
-    super(props);
-    const { data } = this.props;
-  }
-
   render() {
     const { data } = this.props;
 

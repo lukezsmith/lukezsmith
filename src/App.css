@@ -155,6 +155,10 @@ li {
   }
 }
 
+@media only screen and (min-width: 600px) .categories > li {
+  margin-top: 10%;
+}
+
 /* Tablet Portrait */
 @media only screen and (min-width: 600px) {
   body {
@@ -174,10 +178,6 @@ li {
     padding-left: 5%;
     padding-right: 5%;
     max-width: 600px;
-  }
-
-  .categories > li {
-    margin-top: 10%;
   }
 }
 
