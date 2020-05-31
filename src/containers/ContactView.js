@@ -16,17 +16,19 @@ function ContactView() {
         <ul id='social-list'>
           <li>
             <b>
-              <a href='https://twitter.com/lukezsmith'>Github</a>
+              <a href='https://github.com/lukezsmith/'>Github</a>
             </b>
           </li>
           <li>
             <b>
-              <a href='https://twitter.com/lukezsmith'>LinkedIn</a>
+              <a href='https://www.linkedin.com/in/luke-smith-a47931168/'>
+                LinkedIn
+              </a>
             </b>
           </li>
           <li>
             <b>
-              <a href='https://twitter.com/lukezsmith'>Instagram</a>
+              <a href='https://www.instagram.com/lukezachsmith/'>Instagram</a>
             </b>
           </li>
         </ul>
