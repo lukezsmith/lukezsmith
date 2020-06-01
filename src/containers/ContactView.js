@@ -31,6 +31,13 @@ function ContactView() {
               <a href='https://www.instagram.com/lukezachsmith/'>Instagram</a>
             </b>
           </li>
+          <li>
+            <b>
+              <a href='https://www.goodreads.com/user/show/30861574-luke'>
+                Goodreads
+              </a>
+            </b>
+          </li>
         </ul>
       </div>
     </div>
