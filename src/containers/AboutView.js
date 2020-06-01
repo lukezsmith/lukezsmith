@@ -21,19 +21,20 @@ function AboutView() {
         <NavLink to='/projects'>/projects.</NavLink>
       </div>
       <div>
-        When I'm not studying or building things I'm usually trying to find
-        interesting things to think about. <br />I usually find such things in
-        books, and I'll use this site to post about the interesting things I
+        When I'm not studying or programming, I'm usually trying to find
+        interesting things to think about. <br />I usually find these through
+        books, and I'll use this site to post about interesting ideas that I
         read about.
       </div>
 
       <div>
-        With the internet making information so accessible to a lot of people,
-        my view is that innovation favours originality. <br /> One of the best
-        ways of cultivating originality is reading interesting things that other
-        people aren't. <br />
-        This is a goal of mine and I'll try to publish some of the weird
-        thoughts and things I come across on this blog.
+        With the internet making a lot of information accessible to many people,
+        a principle belief of mine is that innovation favours originality.{' '}
+        <br /> One of the best ways of cultivating originality is reading
+        interesting things that other people aren't, and this is something that
+        I try to do a lot. <br />
+        I'll try to publish some of the weird thoughts and things I come across
+        on this blog.
       </div>
 
       <div>
@@ -60,7 +61,7 @@ function AboutView() {
           <li>The future of information in general</li>
           <li>Information validation</li>
           <li>Applications of Blockchain (or is it another trend)</li>
-          <li>Space</li>
+          <li>Space exploration</li>
           <li>The future</li>
           <li>Books</li>
         </ul>
@@ -79,8 +80,8 @@ function AboutView() {
           months at a time.
         </div>
         This blog allows me to explore a subset of my thoughts in a more
-        profound way, potentially allowing me to refine my worldviews or come up
-        with some new interesting idea.
+        profound way, potentially allowing me to refine my worldviews or develop
+        new interesting ideas.
         {/* One benefit of this open form of exploration and learning is the fact that the blog posts could be read and therefore require more effort than the thoughts confined to my dust-lined notebooks.  */}
       </div>
     </div>

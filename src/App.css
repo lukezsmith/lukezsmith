@@ -48,7 +48,7 @@ li {
 .categories > li {
   margin-top: 10%;
   font-size: 0.9em;
-  opacity: 0.9;
+  opacity: 0.75;
 }
 
 .about-list {
