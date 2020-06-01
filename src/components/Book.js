@@ -4,8 +4,13 @@ import PropTypes from 'prop-types';
 function NormalBook(props) {
   const { bookTitle, bookUrl } = props;
   return (
-    <div style={{ paddingTop: '0.5%', paddingBottom: '0.5%' }}>
-      <a href={bookUrl} style={{ color: '#424241' }}>
+    <div
+      style={{
+        paddingTop: '0.5%',
+        paddingBottom: '0.5%'
+      }}
+    >
+      <a href={bookUrl} style={{ color: '#424241', fontWeight: '450' }}>
         {bookTitle}
       </a>
     </div>
