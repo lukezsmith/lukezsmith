@@ -64,13 +64,19 @@ class BookshelfView extends React.Component {
             people are reading, so I thought i'd publish my own list.
             <br />
             <br />
+            This list features all of the books I feel have had an impact on me
+            in some way. You can find every book I've read on my{' '}
+            <a href='https://www.goodreads.com/user/show/30861574-luke'>
+              Goodreads
+            </a>
+            .
+            <br />
+            <br />
             For the sake of organisation, I've decided to highlight those I
             found above average in
             <span style={{ fontWeight: 'bold' }}> bold</span> and outstanding
             books in{' '}
             <span style={{ color: '#385e94', fontWeight: 'bold' }}> blue</span>.
-            <br />
-            <br />
             The list is ordered chronologically, with recent reads at the top.
           </p>
 
