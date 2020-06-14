@@ -41,10 +41,9 @@ class PostView extends React.Component {
 
   render() {
     const { article } = this.state;
-    console.log(article);
     if (article === null) {
       return null;
-    } else if (article === '404') {
+    } else if (article === '404' || article.data.is_visible === false) {
       return <NotFoundView />;
     }
 
