@@ -12,7 +12,10 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 # set production settings
-os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'lukezsmith.settings.production')
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+#                       'lukezsmith.settings.production')
+                      
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE',
+                      'lukezsmith.settings')
 application = get_wsgi_application()
