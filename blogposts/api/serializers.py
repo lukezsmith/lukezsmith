@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from lukezsmith.apps.blogposts.models import Blogpost
+from blogposts.models import Blogpost
 
 
 # serializer to convert queryset data to native python datatypes

@@ -1,5 +1,5 @@
 from django.urls import path
-from lukezsmith.apps.blogposts.api.views import BlogpostViewSet, ProgrammingBlogpostViewSet, BooksBlogpostViewSet, InternetBlogpostViewSet, ThoughtsBlogpostViewSet
+from blogposts.api.views import BlogpostViewSet, ProgrammingBlogpostViewSet, BooksBlogpostViewSet, InternetBlogpostViewSet, ThoughtsBlogpostViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()

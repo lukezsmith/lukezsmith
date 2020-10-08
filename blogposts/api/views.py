@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from lukezsmith.apps.blogposts.models import Blogpost
+from blogposts.models import Blogpost
 from .serializers import BlogpostSerializer
 
 # viewset for displaying all posts

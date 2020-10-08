@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from lukezsmith.apps.books.models import Book
+from books.models import Book
 
 # serializer to convert queryset data to native python datatypes
 

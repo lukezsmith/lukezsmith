@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from lukezsmith.apps.books.models import Book
+from books.models import Book
 from .serializers import BookSerializer
 
 
