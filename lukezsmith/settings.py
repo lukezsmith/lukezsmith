@@ -49,8 +49,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_auth.registration',
 
-    'blogposts',
-    'books',
+    'lukezsmith.blogposts',
+    'lukezsmith.books',
 ]
 
 print("UIHFUIHDSUIFHDSUIFHDUSIHFUIJDSHNFUJIDHNBFUJIDSHBNUFIBSDUFDBFUDBUIFBDSUIFBUIDSBFUIJDBFUIBDSUIFBDSUIFBUIDSBFUIDBFUIDBFUIJDSBFBDSIUFBUDIJSBFUDBSIFBDSUIJBFUISDBFUI")
