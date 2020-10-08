@@ -8,7 +8,7 @@ from django.contrib.postgres.fields import ArrayField
 
 class Blogpost(models.Model):
     title = models.CharField(max_length=120)
-    slug = models.SlugField(blank=True)
+    slug = models.SlugField(blank=True, max_length=120)
     lead = models.CharField(max_length=1000)
     content = models.TextField()
     published_date = models.DateField(default=timezone.now)
