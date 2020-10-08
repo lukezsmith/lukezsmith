@@ -151,3 +151,4 @@ ACCOUNT_AUTHENTICATION_METHOD = "username"
 ACCOUNT_EMAIL_REQUIRED = False
 
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
+SECRET_KEY = "-8hzuk11d#ps4o1ht_xbqnwvx=ekg19vpfe)28h0la*yx#*!$z"
