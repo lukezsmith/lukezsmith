@@ -30,8 +30,11 @@ a:hover {
 }
 
 ul {
-  list-style: none;
   padding-left: 3%;
+}
+
+#sidebar-col > ul{
+  list-style: none;
 }
 
 li {
