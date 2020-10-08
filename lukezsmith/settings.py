@@ -49,11 +49,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_auth.registration',
 
-    'lukezsmith.blogposts',
-    'lukezsmith.books',
+    'blogposts',
+    'books',
 ]
 
-print("UIHFUIHDSUIFHDSUIFHDUSIHFUIJDSHNFUJIDHNBFUJIDSHBNUFIBSDUFDBFUDBUIFBDSUIFBUIDSBFUIJDBFUIBDSUIFBDSUIFBUIDSBFUIDBFUIDBFUIJDSBFBDSIUFBUDIJSBFUDBSIFBDSUIJBFUISDBFUI")
 
 SITE_ID = 1
 
