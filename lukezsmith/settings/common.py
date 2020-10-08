@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # Application definition
 
 INSTALLED_APPS = [
@@ -132,10 +131,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'build/static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [
-    os.path.join(ROOT_DIR, 'build/static'),
+    os.path.join(BASE_DIR, 'build/static'),
 ]
 
 REST_FRAMEWORK = {
@@ -151,4 +149,3 @@ ACCOUNT_AUTHENTICATION_METHOD = "username"
 ACCOUNT_EMAIL_REQUIRED = False
 
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
-# SECRET_KEY = "-8hzuk11d#ps4o1ht_xbqnwvx=ekg19vpfe)28h0la*yx#*!$z"
