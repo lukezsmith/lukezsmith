@@ -1,7 +1,7 @@
 # SECURITY WARNING: keep the secret key used in production secret!
 import json
 import os
-SECRET_KEY = '+2i#a_2ryra6y3_g_6hb9b(w&*xy^axcb2jsh3#b7ppbp*$2ju'
+# SECRET_KEY = '+2i#a_2ryra6y3_g_6hb9b(w&*xy^axcb2jsh3#b7ppbp*$2ju'
 PROD_STATUS = True
 # SECRET_KEY = os.environ.get('LUKEZSMITH_DJANGO_PASS', 'Not Set')
 # PROD_STATUS = os.environ.get('LUKEZSMITH_DJANGO_PRODSTATUS', "False")
