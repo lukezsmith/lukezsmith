@@ -134,7 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'build/static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [
-    # os.path.join(BASE_DIR, 'build/static'),
+    os.path.join(BASE_DIR, 'build/static'),
 ]
 
 REST_FRAMEWORK = {
