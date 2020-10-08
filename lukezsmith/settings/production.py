@@ -14,4 +14,3 @@ SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
 
-SECRET_KEY = "-8hzuk11d#ps4o1ht_xbqnwvx=ekg19vpfe)28h0la*yx#*!$z"
