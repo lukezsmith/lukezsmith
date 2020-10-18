@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 import NotFoundView from '../components/NotFoundView';
 
-const ReactMarkdownWithHtml = require('react-markdown/with-html')
+const ReactMarkdown = require('react-markdown')
 
 
 class PostView extends React.Component {
@@ -79,7 +79,7 @@ class PostView extends React.Component {
               marginBottom: '1%'
             }}
           >
-            {ReactHtmlParser(header)}
+            <ReactMarkdown escapeHtml={false} source={header}></ReactMarkdown>
           </div>
           <div
             style={{
@@ -116,7 +116,7 @@ class PostView extends React.Component {
               marginTop: '1%'
             }}
           >
-            {ReactHtmlParser(footer)}
+            <ReactMarkdown escapeHtml={false} source={footer}></ReactMarkdown>
           </div>
         </div>
       );
@@ -146,7 +146,7 @@ class PostView extends React.Component {
             {headerSection}
             <div className='content-content'>
               {/* {ReactHtmlParser(htmlContent)} */}
-              <ReactMarkdownWithHtml source={htmlContent}></ReactMarkdownWithHtml>
+              <ReactMarkdown escapeHtml={false} source={htmlContent}></ReactMarkdown>
               
             </div>
             <Divider />

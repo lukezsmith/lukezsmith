@@ -1,5 +1,5 @@
-/* Global Styles */
 
+/* Global Styles */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -8,6 +8,25 @@ body {
   font-weight: 450;
   overflow-y: scroll;
 }
+
+blockquote {
+  margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-size: .85em !important;
+	color: #000;
+	background-color: #f0f0f0;
+	border-radius: 3px;
+	padding: .2em 0
+}
+code::before,
+code::after {
+	letter-spacing: -0.2em;
+	content: "\00a0"
+}
+
 
 a {
   font-weight: bold;
@@ -102,9 +121,9 @@ li {
 }
 
 .twitter-btn {
-  margin-top: 2%;
+  margin-top: 5%;
   text-align: center;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 
 .tag-section {
@@ -162,6 +181,19 @@ h4:last-child{
   margin-left: 0px;  
 }
 
+
+.article-img-large{
+  width: 55vw;
+  display: block;
+  margin: 0 auto;
+}
+
+.article-img-small{
+  width: 35vw;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Mobile Breakpoints */
 @media only screen and (max-width: 599px) {
   body {
@@ -196,7 +228,16 @@ h4:last-child{
 
   .twitter-btn {
     margin-top: 5%;
+    text-align: center;
     margin-bottom: 5%;
+  }
+
+  .article-img-large{
+    width: 85vw;
+  }
+
+  .article-img-small{
+    width: 65vw;
   }
 }
 
