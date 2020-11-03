@@ -72,10 +72,9 @@ class BookshelfView extends React.Component {
             .
             <br />
             <br />
-            For the sake of organisation, I've decided to highlight those I
-            found above average in
-            <span style={{ fontWeight: 'bold' }}> bold</span> and outstanding
-            books in{' '}
+            For the sake of organisation, I've decided to highlight the books I
+            found outstanding
+             in{' '}
             <span style={{ color: '#385e94', fontWeight: 'bold' }}> blue</span>.
             The list is ordered chronologically, with recent reads at the top.
           </p>
