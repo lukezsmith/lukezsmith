@@ -1,6 +1,6 @@
 ### hi, I'm luke 👋
 
-I’m currently working on decentralised identity in web3.
+I’m currently working on the future of online communities.
 
 You can read my writing at [lukezsmith.com](https://lukezsmith.com).
 
