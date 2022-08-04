@@ -1,4 +1,4 @@
-### hi, I'm Luke 👋
+### Hi, I'm Luke 👋
 
 I’m currently working on the future of online communities.
 
