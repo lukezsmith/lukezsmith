@@ -1,6 +1,6 @@
 ### Hi, I'm Luke 👋
 
-I’m currently working on the future of online communities.
+I’m a software engineer currently working on various embedded software projects.
 
 You can read my writing at [lukezsmith.com](https://lukezsmith.com).
 
