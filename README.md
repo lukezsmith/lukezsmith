@@ -1,6 +1,6 @@
 ### Hi, I'm Luke 👋
 
-I’m a software engineer currently working on various embedded software projects.
+I’m an embedded software engineer.
 
 You can read my writing at [lukezsmith.com](https://lukezsmith.com).
 
