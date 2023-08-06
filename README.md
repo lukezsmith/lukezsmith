@@ -1,6 +1,6 @@
 ### Hi, I'm Luke 👋
 
-I’m an embedded software engineer.
+I’m an accomplished software engineer with demonstrated expertise in complex system development, adept application of design patterns, and a proven track record of delivering enhanced product functionality, user experiences, and performance. Proficient in Agile methodologies, problem-solving, and fostering seamless cross-functional collaboration within dynamic multi-disciplinary teams.
 
 You can read my writing at [lukezsmith.com](https://lukezsmith.com).
 
